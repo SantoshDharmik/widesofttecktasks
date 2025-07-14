@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+            padding: 5rem;
+            margin: 10rem auto;
+            position: relative;
+            
+            background-color: black;
+
+
+        }
+
+        .child1 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            z-index: 99;
+            
+
+        }
+
+        .triangle {
+            width: 100%;
+            height: 100%;
+            width: 300px;height: 300px;
+        }
+
+        .red {
+            background: red;
+            transform: rotate(45deg);
+            position: absolute;
+            left: -70%;
+            
+        }
+
+        .green {
+            background: green;
+            transform: rotate(45deg);
+            position: absolute;
+            top: -70%;
+           
+        }
+
+        .yellow {
+            background: gold;
+            transform: rotate(45deg); 
+            position: absolute;
+            right: -70%;
+            
+
+            
+        }
+
+        .blue {
+            background: deepskyblue;
+            transform: rotate(45deg);
+            position: absolute;
+            bottom: -70%;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child1">
+            <div class="triangle red"></div>
+            <div class="triangle green"></div>
+            <div class="triangle yellow"></div>
+            <div class="triangle blue"></div>
+        </div>
+    </div>
+</body>
+
+</html>

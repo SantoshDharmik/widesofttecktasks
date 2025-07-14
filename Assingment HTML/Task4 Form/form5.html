@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>Feedback Form</h1>
+</head>
+<body>
+
+    <form action="address.exe" method="post">
+        <ul>
+            <li>
+                <label for="n">Name: </label>
+                <input type="text" id="n">
+            </li> <br>
+            <li>
+                <label for="e">Email: </label>
+                <input type="email" id="e">
+            </li> <br>
+            <li>
+                <label for="p">Password: </label>
+                <input type="password" id="p">
+            </li>
+ 
+            <br>
+
+            <li> Please check all the emotions that apply to you:
+                <ul style="list-style-type: circle;"> <!--fomatting not applying-->
+                    <li>
+                        <label for="ang">Angry</label>
+                        <input type="checkbox" id="ang" checked>
+                    </li>
+                    <li>
+                        <label for="sa">Sad</label>
+                        <input type="checkbox" id="sa">
+                    </li>
+                    <li>
+                        <label for="ha">Happy</label>
+                        <input type="checkbox" id="ha">
+                    </li>
+                    <li>
+                        <label for="am">Ambivalent</label>
+                        <input type="checkbox" id="am">
+                    </li>
+                </ul> <br>
+
+            </li>
+            <li> How satisfied were you with our service?
+                <ul>
+                    <li>
+                        <label for="vs">Very Satisfied</label>
+                        <input type="radio" name="rad" id="vs" checked>
+                    </li>
+                    <li>
+                        <label for="s">Satisfied</label>
+                        <input type="radio" name="rad" id="s">
+                    </li>
+                    <li>
+                        <label for="dc">Didn't care</label>
+                        <input type="radio" name="rad" id="dc">
+                    </li>
+                    <li>
+                        <label for="di">Dissatisfied</label>
+                        <input type="radio" name="rad" id="am">
+                    </li>
+                    <li>
+                        <label for="vd">Very dissatisfied</label>
+                        <input type="radio" name="rad" id="vd">
+                    </li>
+
+                </ul>
+                <br>
+
+            </li>
+            <li>
+                <label for="phol">Further Comments: </label> <br>
+                <textarea id="phol" cols="40" rows="4"></textarea>
+            </li> <br>
+            <li>
+                <label for="photo">
+                    Bio Photo:
+                </label>
+                <input type="file" id="photo">
+            </li> <br>
+            <li>
+                <label for="lov">
+                    Location visited:
+                </label>
+                <select id="lov">
+                    <option value="">NAGPUR</option>
+                    <option value="">AMRAVATI</option>
+                    <option value="">MUMBAI</option>
+                </select>
+            </li> <br>
+            <li>
+                <input type="submit" value="SUBMIT">
+            </li>
+        </ul>
+    </form>
+</body>
+</html>

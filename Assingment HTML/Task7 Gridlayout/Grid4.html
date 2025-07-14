@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>Grid Layout 4</h1>
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+        .parent{
+            width: 600px;height: 600px;
+            
+            margin: 10rem auto;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 1rem;
+
+
+        }
+        .sk{
+            border: 1px solid rgb(178, 170, 170);
+            background-color: rgb(59, 212, 255);
+            
+
+        }
+        .child1{
+            grid-column: 1/3;
+            grid-row: 1/3;
+            background-color: rgb(42, 41, 41);
+
+        }
+         .child10{
+            grid-column:3/5 ;
+            grid-row:3/5 ;
+            background-color: rgb(89, 159, 246);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="sk child1"></div>
+        <div class="sk child2"></div>
+        <div class="sk child3"></div>
+        <div class="sk child4"></div>
+        <div class="sk child5"></div>
+        <div class="sk child6"></div>
+        <div class="sk child7"></div>
+        <div class="sk child8"></div>
+        <div class="sk child9"></div>
+        <div class="sk child10"></div>
+        
+    </div>
+
+    
+</body>
+</html>

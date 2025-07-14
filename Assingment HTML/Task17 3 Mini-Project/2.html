@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>Mini Project 2 </h1>
+    <style>
+        *{
+            margin: 0;padding: 0;
+            color: white;
+        }
+        h1{
+            color: black;
+        }
+        .screen{
+            width: 100vw;
+            height: 100vh;
+            /* border: 1px solid black; */
+            background-color: lightgreen;
+            background-image: url(./css_background_image_1-png.png);
+            background-size: cover;
+            
+            background-image: fixed
+            ;
+        }
+        .part1{
+            /* border: 1px solid black; */
+            display: flex;
+
+        }
+        .left{
+            flex-grow:3;
+            display: flex;
+            font-size: 30px;
+            font-weight: 600;
+            
+            
+
+        }
+        .top{
+            display: flex;
+             flex-grow: 1;
+            
+            flex-direction:row;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        /* div 1 complete */
+        .part2{
+            padding: 3.5rem;
+            
+            position: relative;
+            top: 100px;
+            height: 150px;
+            /* border: 1px solid black; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        span{
+            font-size: 30px;
+            font-weight:600;
+        }
+        
+        p{
+            text-align: center;
+        }
+        .sk2{
+            position: relative;
+            top: 10%;
+        }
+        .b1{
+            text-align: center;
+            padding: 5px 20px;
+            background-color: transparent;
+            border: 2px solid white;
+
+        }
+        @media only screen and {
+            
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="screen">
+        <div class="part1">
+            <div class="left">Encore</div>
+            <div class="top">
+            
+                <div class="top top1">HOME</div>
+                <div class="top top1">EVENTS</div>
+                <div class="top top1">SCHEDULE</div>
+                <div class="top top1">VENUE</div>
+                <div class="top top1">REGISTER</div>
+                </div>
+
+            
+        </div>
+        <div class="part2">
+            <div class="sk1">
+                <span>Dedicated to AltCampus'Friends and Family</span> <br> <br>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate 
+                    repudiandae alias at fugit officia facere</p>
+            </div>
+
+            <div class="sk2">
+                <button class="b1">Register Now </button>
+            </div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>

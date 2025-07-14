@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>outline</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container1{
+            height: 500px;
+            width: 500px;
+            border: 2px solid green;
+            margin: 3rem auto;
+            outline: 2rem solid red;
+            outline-style: groove;
+            /* outline-offset: 1rem; */
+        }
+        input::placeholder{
+            font-style: italic;
+            color: blueviolet;
+            /* font-size: 1.5rem; */
+            outline: 2px solid yellow;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container1">
+    </div>
+    <input type="text" placeholder="ENTER YOUR NAMEE" >
+</body>
+</html>

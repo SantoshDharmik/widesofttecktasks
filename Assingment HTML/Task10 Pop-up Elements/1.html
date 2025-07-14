@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pop element</title>
+    <style>
+        *{
+            margin: 0; padding: 0; font-size: 30px;
+        }
+         h1{
+            text-shadow: 2px 4px 8px skyblue;
+
+        }
+        .redbox{
+            height: 50vh;
+            width: 50vw;
+            background-color: skyblue;
+            display: none;
+        }
+
+        .click-aa{
+            display: block;
+        }
+        input:checked+.redbox{
+            display: block;
+        }
+
+
+        .greenbox { 
+            height: 50vh;
+            width: 50vw;
+            background-color: orange;
+            display: none;
+        }
+        /* .click1-aa{
+            display: block;
+        } */
+        .inputG:checked+.greenbox{
+            display: block;
+        }
+       
+    </style>
+</head>
+<body>
+     <h1>SANTOSH DHARMIK</h1> <br>
+    <label for="click-a" class="click-aa">open skyblue box</label>
+    <input type="checkbox" id="click-a" hidden>
+
+    <div class="redbox">
+        skyblue BOX OPENED SUCCESSFULLY
+        <label for="click-a" style="background-color: white;">CLOSE skyblue BOX</label>
+    </div>
+
+    <label for="click1-a" class="class1-aa">open orange box</label>
+    <input type="checkbox" id="click1-a" hidden class="inputG">
+
+    <div class="greenbox">
+        Orange BOX OPENED SUCCESSFULLY
+        <label for="click1-a" style="background-color: white;">CLOSE Orange BOX</label>
+    </div>
+<div>
+       
+    </div>
+
+
+
+</body>
+</html>

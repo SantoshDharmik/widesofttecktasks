@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>MINI Project 1</h1>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            
+        }
+
+        .screen {
+            width: 100vw;
+            height: 100vh;
+            
+            background-color: rgb(18, 6, 30);
+        }
+
+        .logo {
+            
+            display: flex;
+        }
+
+        .name {
+            flex-grow: 1;
+            
+        }
+
+        .name1 {
+            flex-grow: 8;
+        }
+
+        .name2 {
+            flex-grow: 3;
+            display: flex;
+            flex-direction: row;
+            
+             
+             text-align: center;
+        }
+
+        .text {
+            
+           
+            color: rgb(11, 249, 11);
+            justify-content: center;
+            align-content: center;
+            
+        }
+        .text1{
+            flex-grow: 1;
+        }
+         .text2{
+            flex-grow: 1;
+        }
+         .text3{
+            flex-grow: 1;
+        }
+         .text4{
+            flex-grow: 1;
+            color: black;
+        }
+        button{
+            background-color:rgb(11, 249, 11) ;
+            padding: 4px 8px;
+            border: none;
+        }
+        /* first div is complete */
+
+        .para{
+            margin: 1rem;
+            border-radius: 5%;
+            padding:1.5rem;
+            width: 90vw;height: 205px;
+            /* border: 1px solid black; */
+            display: flex;
+            gap: 1.5rem;
+            background-color: white;
+            
+        
+        }
+        .para1{
+            /* border: 1px solid black; */
+            display: flex;
+            
+            
+            
+        }
+        .paragraph{
+            width: 1px;
+            flex-grow: 1;
+            /* padding: 1.5rem; */
+            text-align: justify;
+            overflow: hidden;
+            
+            
+        } 
+        .photo{
+            flex-grow: 1;
+            padding: 1rem;
+            background-image: url(./infosys.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            /* box-shadow: 5px 10px 15px; */
+        }
+        /* second div is complete */
+        .b2{
+            margin: 2rem;
+            padding: 8px 100px;
+            /* position: relative; */
+            /* left:30vw; */
+           display: flex;
+           justify-self: center;
+           
+            
+
+            
+        }
+        .para2{
+            /* width: 200px; */
+            height: 100px;
+            /* background-color: red; */
+            display: flex;
+             gap: 1rem;
+             /* padding: 1rem; */
+             
+            
+        }
+        .p2{
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            background-color: white;
+            
+            
+            
+            
+           
+
+
+        }
+        .sk1{
+            flex-grow: 1;
+
+        }
+         .sk2{
+            flex-grow: 1;
+
+        }
+         .sk3{
+            flex-grow: 1;
+
+        }
+        .icon1{
+            width: 50px;height: 50px;
+            /* transform: translate(50%,50%); */
+            
+            
+            
+        }
+        /* third div complete */
+        .lastpara{
+            margin: 3rem;
+            
+            padding:1.5rem;
+            width: 90vw;height: 70px;
+            /* border: 1px solid black; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+
+
+        }
+        .about{
+            font-size: 30px;
+        }
+        @media only screen and (max-width:px)
+        {
+            .para{
+                display: flex;
+                flex-direction:column;
+            }
+            
+        }
+
+
+
+        
+
+    </style>
+</head>
+
+<body>
+    <div class="screen">
+        <div class="logo">
+            <div class="name name1">
+                <img class="logo1" src="./perpractise1.html" alt="infosys">
+            </div>
+            <div class="name name2">
+                <div class="text text1">
+                    About Us
+
+                </div>
+
+                <div class="text text2">
+                    Focus Areas & Skills
+
+                </div>
+
+                <div class="text text3">
+                    Language
+
+                </div>
+
+                <div class="text text4">
+                    <button>LOGIN</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="para">
+            <div class="para1 paragraph">
+                <p>The future of India will be shaped by today's younger generation who need quality education through digital literacy, making them productive and self-reliant citizens. 'Digital literacy' is the skills required to achieve digital competence and use of Information and Communication Technology (ICT) for work, leisure, learning and communication. It does not replace traditional forms of literacy, instead complements and amplifies the skills that form the foundation of traditional forms.</p>
+            </div>
+            <div class="para1 photo"></div>
+
+
+
+        </div>
+        <div class="child button">
+            <button class="b2">GET STARTED</button>
+        </div>
+        <div class="para2">
+            <div class="p2 sk1">
+                <img class="icon1" src="./1icon.svg" alt="icon">
+
+                Core Skills <br>
+                Digital Skills 
+            </div>
+            <div class="p2 sk2">
+                <img class="icon1" src="./icon2.svg" alt="icon">
+                
+                Life Skills <br>
+                Behavioral Skills
+            </div>
+            <div class="p2 sk3">
+                <img class="icon1" src="./icon3.svg" alt="icon">
+                Life Long learning <br>
+                Continuous Education
+            </div>
+
+        </div>
+
+        <div class="lastpara">
+            <div class="last about">
+                <b>About Infosys Springboard</b>
+
+            </div> <br>
+            <div class="last para5">
+                <i>
+                <p>Infosys Springboard is a Digital literacy program launched as part of the Infosys ESG Tech for Good charter. It aims to enable students and associated communities from early education to lifelong learners by imparting digital and life skills through curated content & interventions, free of cost.</p></i>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

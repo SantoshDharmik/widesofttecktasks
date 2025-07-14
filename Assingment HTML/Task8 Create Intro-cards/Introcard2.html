@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .parent {
+            width: 90vw;
+            height: 50vh;
+            border: 1px solid black;
+            display: flex;
+            margin: 1rem auto;
+            background-image: url("./backgroundintrocard.jpg");
+            background-size:cover;
+            background-repeat: no-repeat;
+            
+            
+
+           
+            
+
+        }
+
+        .child {
+            /* border: 1px solid black; */
+
+        }
+
+        .child1 {
+            flex-grow: 1;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
+        .space {
+            gap: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .d {
+            /* border: 1px solid black; */
+            gap: 1rem;
+            display: flex;
+        }
+        img {
+            width: 20px;
+
+        }
+
+
+        .child2 {
+            flex-grow: 4;
+           
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            gap: 15px;
+        }
+        .sk{
+            /* border: 1px solid black; */
+             /* margin: 1rem; */
+             
+            
+        }
+        .sk1{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+        .sk2{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+
+        }
+        .sk3{
+            text-align: center;
+        }
+        .gk{
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+        }
+        .QR{
+            width: 100px;
+            height: 100px;
+            
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <!-- <img src="./waves.png" alt="wave"> -->
+        <div class="child child1">
+            <div class="space">
+                <div class="d add">
+                    <img src="./villa.png" alt="Villa">PLOT NO. 963, SHANTI KUNJ
+                </div>
+
+                <div class="d no">
+                    <img src="./smartphone.png" alt="Phone">+91 9356192274
+                </div>
+
+                <div class="d mail">
+                    <img src="./global-network.png" alt="Network">Santoshdharmik5@gmail.com
+                </div>
+
+                <div class="d name">
+                    <img src="./hand.png" alt="Mail">INSTAGRAM.COM/SKDHARMIK1728
+                </div>
+
+            </div>
+        </div>
+        <div class="child child2">
+            <div class="sk sk3">
+                <img class="gk"   src="./1000009374.jpg" alt="photo">
+
+
+
+            </div>
+            <div class="sk sk1">
+                <h2>SANTOSH DHARMIK </h2>
+                <br>
+                MERN STACK DEVELOPER
+            
+            </div>
+            <div class="sk sk2">
+                <img class="QR" src="./qr-code.png" alt="QR Code">
+            </div>
+            <!-- <div class="sk sk3">3</div> -->
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;padding: 0;
+    }
+    .parent{
+        margin: 5rem auto;
+        width: 500px;height: 500px;
+        border: 1px solid black;
+        background-color: skyblue;
+        
+
+    }
+    img{
+        height: 100px;
+        display: flex;
+        flex-direction:row;
+        gap: 2rem;
+        
+    }
+    .child1{
+        aspect-ratio: 1/1;
+    }
+     .child2{
+        aspect-ratio:4/3;
+        
+    }
+     .child3{
+        aspect-ratio: 4/5;
+        
+    }
+     .child4{
+        aspect-ratio: 16/9;
+        
+    }
+    
+    
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div>
+            <img class="child1" src="./images (1).jpeg" alt="instagram"> <br>
+            <img  class="child2" src="./images (1).jpeg" alt="instagram"> <br>
+            <img class="child3" src="./images (1).jpeg" alt="instagram"> <br>
+            <img class="child4" src="./images (1).jpeg" alt="instagram"> <br>
+            
+            
+        </div>
+    </div>
+    
+</body>
+</html>

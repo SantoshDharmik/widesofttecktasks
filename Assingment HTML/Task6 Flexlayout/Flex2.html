@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>Flex layout 2</h1>
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+        .parent{
+            width: 700px;height: 1100px;
+            border: 1px solid black;
+            margin: 2rem auto;
+            padding: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1pxrem;
+            
+
+            
+        }
+        .child1{
+            width: 700px;height: 150px;
+            border: 1px solid black;
+            font-size: 100px;
+            background-color: aqua;
+            gap: 0.5rem;
+            border: none;
+        }
+        .child2{
+            width: 700px;height: 500px;
+            border: 1px solid black;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: space-between;
+            border: none;
+            
+
+            
+            
+
+        }
+
+        #sk1{
+            width: 250px;height: 500px;
+            border: 1px solid black;
+            gap: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: none;
+             
+        }
+         #sk2{
+            width: 400px;height: 500px;
+            border: 1px solid black;
+            gap: 0.5rem;
+             display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+             border: none;
+        }
+        #k1{
+            width: 250px;height: 35%;
+            border: 1px solid black;
+            background-color: rgb(207, 158, 202);
+            font-size: 100px;
+             border: none;
+            
+        }
+         #k2{
+            width: 250px;height: 60%;
+            border: 1px solid black;
+            gap: 1rem;
+            background-color: greenyellow;
+            font-size: 70px;
+             border: none;
+        }
+         #s1{
+            width: 400px;height: 70%;
+            border: 1px solid black;
+            gap: 1rem;
+            background-color: rgb(149, 168, 39);
+            font-size: 50px;
+             border: none;
+            
+        }
+         #s2{
+            width: 400px;height: 25%;
+            border: 1px solid black;
+            background-color: rgb(141, 131, 131);
+            font-size: 50px;
+             border: none;
+        }
+        p{
+             font-size: 20px;
+             
+
+        }
+        
+            
+
+    
+        .child3{
+            width: 700px;height: 150px;
+            border: 1px solid black;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: space-between;
+            border: none;
+        }
+        
+        
+         #sk5{
+            width: 520px;height: 150px;
+            border: 1px solid black;
+            font-size: 70px;
+            background-color: green;
+
+        }
+         #sk6{
+            width: 150px;height: 150px;
+            border: 1px solid black;
+            font-size: 40px;
+             background-color: pink;
+             border: none;
+
+
+        }
+         .child4{
+            width: 700px;height: 150px;
+            border: 1px solid black;
+            font-size: 100px;
+            background-color: darkorange;
+            gap: 0.5rem;
+            border: none;
+         }
+
+
+
+
+    </style>
+    
+</head>
+<body>
+    <div class="parent">
+        <div class="child1">HEADER</div>
+        <div class="child2">
+            <div id="sk1">
+                <div id="k1">Hero</div>
+                <div id="k2">Sidebar</div>
+            </div>
+            <div id="sk2">
+                <div id="s1">Main content
+                    <br> <br>
+                     <p>A paragraph is a distinct unit of writing, composed of one or more sentences, that focuses on a single idea or topic. It's a fundamental element in organizing and structuring written work, helping readers follow the author's train of thought.</p>
+                </div>
+                <div id="s2">Extra Content
+                   
+                </div>
+            </div>
+
+        </div>
+         
+
+
+
+
+          <div class="child3">
+            <div id="sk5">Related Images</div>
+            <div id="sk6">Related Posts</div>
+            
+
+          </div>
+           <div class="child4">Footer</div>
+
+
+
+
+    </div>
+    
+</body>
+</html>

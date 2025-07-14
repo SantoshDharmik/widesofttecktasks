@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>Mini Project 3</h1>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .screen{
+            width: 90vw;height: 48vh;
+            background-color: gray;
+            background-image: url(./imagesbg.jpg);
+        }
+        .part1{
+            height: 50px;
+            /* border: 1px solid black; */
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+        }
+        .left{
+            flex-grow: 1;
+            /* border: 1px solid black; */
+            font-size: 35px;
+            text-shadow: 1px 4px 4px black;
+            color: white;
+            
+
+        }
+        .middle{
+            display: flex;
+             flex-grow: 1;
+             /* border: 1px solid black; */
+             color: white;
+             gap: ;
+
+
+        }
+        
+        .right{ 
+            flex-grow: 1;
+            
+            /* border: 1px solid black; */
+            /* position: relative;
+            left: 5%; */
+
+        }
+        button{
+            padding: 7px 10px;
+            background-color: lightpink;
+        }
+        .top{
+            /* border: 1px solid black; */
+            display: flex;
+            
+        }
+        .top1{
+            flex-grow: 1;
+        }
+        /* complete div one */
+        .part2{
+            /* border: 1px solid black; */
+            height: 50vh;
+            display: flex;
+        }
+        .left2{
+            flex-grow: 1;
+            /* background-color: skyblue; */
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            justify-content: center;
+            padding: 2rem 3rem;
+            /* align-items: center; */
+
+        }
+       
+        .text1{
+            /* border: 1px solid black; */
+            color: white;
+            
+
+
+        }
+        .text2{
+            /* border: 1px solid black; */
+            color: white;
+            /* font-family: cursive; */
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 20px;
+
+        }
+        .text3{
+            /* border: 1px solid black; */
+            color: rgb(245, 245, 245);
+            font-size: 12px;
+            position: relative;
+            top: -2%;
+
+        }
+        /* .text4{
+            border: 1px solid black;
+
+        } */
+         .right2{
+            flex-grow: 3;
+            display: flex;
+            justify-content:end;
+            align-content: end;
+
+        }
+        .image{
+            width: 300px;height: 300px;
+            overflow: hidden;
+            
+            
+
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="screen">
+        <div class="part1">
+            <div class="left">SANTOSH</div>
+            <div class="middle">
+
+                <div class="top top1">Home</div>
+                <div class="top top1">About</div>
+                <div class="top top1">Services</div>
+                <div class="top top1">Projects</div>
+                <div class="top top1">Blog</div>
+                <div class="top top1">Contact</div>
+
+            </div>
+            <div class="right">
+                <button>Hire Me</button>
+            </div>
+
+
+        </div>
+        <div class="part2">
+            <div class="left2">
+
+                <div class="text1"> <b>Hello World! I am</b></div>
+
+                <div class="text2">
+                    <h1>Developer</h1> 
+                    
+                </div>
+                <div class="text3">
+                    
+                    <p>Junior MERN Stack Developer Based On NAGPUR City</p>
+                </div>
+ 
+                
+
+                <div class="text4">
+                    <button>Download Resume</button>
+                    <button>Contact Me</button>
+                </div>
+
+            </div>
+            <div class="right2">
+                <img  class="image" src="./1000009374-removebg-preview.png" alt="santosh">
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

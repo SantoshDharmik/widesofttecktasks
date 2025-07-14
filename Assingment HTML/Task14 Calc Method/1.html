@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS calc() with Animation Duration</title>
+  <style>
+    :root{
+        --line1: 100px;
+        --line2: 200px;
+    }
+
+    .box {
+      width: calc(100% - 200px);
+      height: 100px;
+      background-color: lightskyblue;
+      animation-name: move;
+      animation-duration: calc(2s + 2s + 10s);
+      animation-timing-function: ease-out;
+      animation-iteration-count: infinite;
+      /* animation-direction: alternate; */
+    }
+    .box1 {
+      width: calc(100% - 200px);
+      height: 100px;
+      background-color: lightskyblue;
+      animation-name: move;
+      animation-duration: calc(2s + 2s + 2s);
+      animation-timing-function: steps(5);
+      animation-iteration-count: infinite;
+      /* animation-direction: alternate; */
+    }
+    .box3 {
+      width: calc(100% - 200px);
+      height: 100px;
+      background-color: lightskyblue;
+      animation-name: move;
+      animation-duration: calc(2s + 2s + 2s);
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      /* animation-direction: alternate; */
+    }
+
+    @keyframes move {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(100px);
+      }
+    }
+    .box2{
+        height: calc(var(--line1) + var(--line1));
+        height: var(--line1);
+        width: var(--line2);
+        border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div> <br>
+  <div class="box1"></div> <br>
+  <div class="box3"></div>
+  <div class="box2"></div>
+</body>
+</html>
