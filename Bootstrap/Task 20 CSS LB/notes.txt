@@ -1,0 +1,73 @@
+Summary of CSS library
+
+What Is a CSS Library and why we used in our website?
+
+-A CSS library is a collection of pre-written CSS code
+
+-A CSS library is like a toolbox full of ready-made styles that help you make websites look good without starting from scratch.
+
+-We writing all the design code yourself (like for buttons, layouts, or colors), a CSS library gives you pre-made styles that we can just plug into our website, it's simple mining is that it will be saves time, keeps our design consistent & work well on all screen size (likes phones and computer).
+
+a)Faster building
+b)Easy to maintain and update
+c)Looks good out of the box 
+d)Works everywhere
+d)Saves time
+e)Makes websites look good
+f)Easy to maintain and update
+g)Ensures mobile-friendliness
+
+There are many CSS libraries are follows;
+
+1)Bootstrap
+The most popular CSS framework.
+
+Features:
+Pre-built components like buttons, cards, navbars
+Mobile-friendly (responsive by default)
+Comes with JavaScript plugins (like modals, sliders)
+
+Used for:
+Quick web design with a professional look
+Making responsive layouts without much effort
+
+2)Taiwind
+A utility-first CSS framework.
+
+Features:
+Small classes for each CSS property (like bg-blue-500, p-4, text-center).
+You build your design step by step using these utilities.
+Highly customizable.
+
+Used for:
+Full control over the design.
+Custom, modern-looking websites.
+
+3)Bulma
+A modern CSS framework that is easy to learn
+
+Features:
+Based on Flexbox (easy layouts)
+Clean, minimal design
+No JavaScript – only CSS
+
+Used for:
+Clean, simple websites.
+Beginners learning responsive design.
+
+4)Foundation
+A responsive front-end framework like Bootstrap.
+
+Features:
+More flexible than Bootstrap
+Includes accessibility tools (good for screen readers)
+Comes with responsive grids, components, and JavaScript plugins
+
+Used for:
+Professional, large-scale websites.
+Accessible and responsive design.
+
+
+
+
+
