@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap-5/css/bootstrap.css">
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+        .parent{
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            gap: 1rem;
+        }
+        .child{
+            height: 
+            400px;
+            background-color:white;
+            display: flex;
+            gap: 1rem;
+        }
+        .child1{
+            width: 100px;height: 100px;
+            /* background-color: black; */
+        }
+        .child2{
+          width: 100px;height: 100px;  
+        }
+        .child3{
+            width: 100px;height: 100px; 
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child px-5 py-5">ADD & SUB
+            <div class="child1 border-top border-start border-end border-bottom border-black border-1">1</div>
+            <div class="child1 border-start border-black border-2">2</div>
+            <div class="child1 border-top border-black border-3">3</div>
+            <div class="child1 border-start border-black border-4">4</div>
+            <div class="child1 border-bottom border-black border-5">5</div>
+
+           <div class="child1 border-top border-start border-end border-0 border-black border-5">6</div>
+           <div class="child1 border-top border-0 border-end border-bottom border-black border-5">7</div>
+           <div class="child1 border-top border-start border-0 border-bottom border-black border-5">8</div>
+           <div class="child1 border-0 border-start border-end border-bottom border-black border-5">9</div>
+
+        </div>
+
+        <div class="child px-5 py-5">opacity and border size
+            <div class="child2 border border-danger border-5 ">1</div>
+            <div class="child2 border-4 border-danger border border-opacity-75">1</div>
+            <div class="child2 border-3 border-danger border border-opacity-75">1</div>
+            <div class="child2 border-2 border-danger border border-opacity-50">1</div>
+            <div class="child2 border-1 border-danger border border-opacity-25">1</div>
+           
+        </div>
+        <div class="child py-5 px-5 ">border color
+            <div class="child2 border-5 border border-danger">1</div>
+            <div class="child2 border-5 border border-primary ">1</div>
+            <div class="child2 border-5 border border-secondary ">1</div>
+            <div class="child2 border-5 border border-success ">1</div>
+            <div class="child2 border-5 border border-info ">1</div>
+            <div class="child2 border-5 border border-dark">1</div>
+            <div class="child2 border-5 border border-light ">1</div>
+            
+            <div class="child2 border-5 border border-warning ">1</div>
+            
+        </div>
+       
+
+    </div>
+    
+</body>
+</html>

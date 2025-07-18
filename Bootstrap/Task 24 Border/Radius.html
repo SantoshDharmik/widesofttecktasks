@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap-5/css/bootstrap.css">
+    <style>
+    *{
+        margin: 0;padding: 0;
+    }
+    .sk{
+            background-color: skyblue;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            gap: 1rem;
+            w500px height: 500px;
+            
+    }
+    .child{
+        background-color: beige;
+        height: 200px;
+        display:flex;
+        gap: 1rem;
+    }
+    .child1{
+        width: 100px;height: 100px;
+        background-color: lightgreen;
+        
+
+    }
+    .child2{
+        width: 100px;height: 100px;
+        background-color: lightpink;
+        
+
+    }
+     .child3{
+        width: 100px;height: 100px;
+        background-color: gray;
+        flex-wrap: nowrap;
+        
+
+    }
+    </style>
+</head>
+<body>
+    <div class="sk">
+        <div class="child bg-danger px-5 py-5">Size 
+            <div class="child1 rounded-0">1</div>
+            <div class="child1 rounded-1">2</div>
+            <div class="child1 rounded-2">3</div>
+            <div class="child1 rounded-3">4</div>
+            <div class="child1 rounded-4">5</div>
+            <div class="child1 rounded-5">6</div>
+            <div class="child1 rounded-circle">9</div>
+            <div class="child1 rounded-pill">8</div>
+            
+            
+        </div>
+        <div class="child bg-info px-5 py-5">Radius
+            <div class="child2 rounded ">1</div>
+            <div class="child2 rounded-top ">2</div>
+            <div class="child2 rounded-end ">3</div>
+            <div class="child2 rounded-bottom ">4</div>
+            <div class="child2 rounded-start ">5</div>
+
+            
+        </div>
+        <div class="child bg-primary py-5">shapes
+            <div class="child3 rounded-circle "></div>
+            <div class="child3 rounded-bottom-5"></div>
+            <div class="child3 rounded-top-5 "></div>
+            <div class="child3 rounded-start-5 "></div>
+            <div class="child3 rounded-end-5 "></div>
+            
+           
+        </div>
+        <div class="child bg-success px-5 py-5">circle
+        
+            <div class="child3 rounded-start-circle "></div>
+            <div class="child3 rounded-top-circle "></div>
+            <div class="child3 rounded-bottom-circle "></div>
+            <div class="child3 rounded-end-circle "></div>
+
+            
+            <div class="child3 rounded-5 rounded-top-0"></div>
+            <div class="child3 rounded-5 rounded-bottom-0"></div><div class="child3 rounded-5 rounded-end-0"></div>
+            <div class="child3 rounded-5 rounded-start-0"></div>
+
+        </div>
+         <div class="child bg-warning py-5">pill
+        
+            <div class="child3 rounded-end-pill "></div>
+            <div class="child3 rounded-top-pill "></div>
+             <div class="child3 rounded-bottom-pill "></div>
+            <div class="child3 rounded-end-pill "></div>
+        </div>
+
+       
+    </div>
+</body>
+</html>
+
