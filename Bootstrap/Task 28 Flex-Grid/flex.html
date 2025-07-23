@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap-5/css/bootstrap.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .parent {
+            width: 300px;
+            height: 400px;
+        }
+
+        .parent1 {
+            width: 400px;
+            height: 400px;
+
+
+        }
+
+        .chil {
+            width: 100px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div
+        class="parent  border border-3 border-dark bg-gradient opacity-75 px-5 py-5 mx-5 my-5 d-flex flex-column gap-1">
+        <div class="child bg-info child1 border border-3 border-dark">Header</div>
+        <div class="child  child2 d-flex gap-1 flex-grow-1 ">
+            <div class="middle flex-grow-1 bg-warning border border-3 border-dark"></div>
+
+            <div class="middle d-flex flex-column gap-1 flex-grow-1">
+
+                <div class="sk bg-primary flex-grow-1 border border-3 border-dark "></div>
+                <div class="sk bg-primary flex-grow-1 border border-3 border-dark"></div>
+
+            </div>
+        </div>
+        <div class="child bg-success child3 flex-grow-1 border border-3 border-dark"></div>
+        <div class="child bg-secondary child4 border border-3 border-dark">END</div>
+    </div>
+
+</body>
+
+</html>
