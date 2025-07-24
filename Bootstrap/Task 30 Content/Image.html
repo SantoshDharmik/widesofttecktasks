@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <h1>sk</h1>
+    <link rel="stylesheet" href="../bootstrap-5/css/bootstrap.css">
+
+    <style>
+        .element {
+            width: 500px;
+            height: 500px;
+            
+        }
+        /* option-1
+        .img-fluid{
+            height: 100%;
+        } */
+         /* option-2-used bootstrap h-100*/
+        
+    </style>
+
 </head>
+
 <body>
-    
+    <div class="parent d-flex gap-5">
+
+   
+
+    <div class="element border bg-danger border-dark mx-auto my-5">
+        <img class="img-fluid h-100" src="../photos/image.jpg" alt="photo">
+    </div>
+    <div class="element border bg-danger border-dark mx-auto my-5">
+        <img class="img-fluid h-100" src="../photos/images (1).jpeg" alt="photo">
+    </div>
+     </div>
+
 </body>
+
 </html>
