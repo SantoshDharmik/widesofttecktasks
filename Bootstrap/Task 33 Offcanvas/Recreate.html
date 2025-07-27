@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <h1><b>offcanvas with collapse</b></h1>
 
     <link rel="stylesheet" href="../bootstrap-5/css/bootstrap.css">
     <script src="../bootstrap-5/js/bootstrap.bundle.min.js"></script>
@@ -13,27 +14,81 @@
 
 <body>
     <div class="container-fluid py-5">
-        <div class="container border border-dark p-5">
-
-            <!-- trigger -->
-            <button class="btn btn-danger" data-bs-target="#offcanvas-example" data-bs-toggle="offcanvas">
-                open offcanvas
+        <div class="container border bg-dark border-3 border-dark p-5">
+            <!-- trigger part -->
+            <button class="btn btn-danger mx-5 px-5" data-bs-toggle="offcanvas" data-bs-target="#ex-offcanvas">
+                Click
             </button>
 
-            <!-- target -->
+            <!-- target part -->
+            <div class="offcanvas offcanvas-start" id="ex-offcanvas" data-bs-backdrop="static">
 
-            <div class="offcanvas offcanvas-start" id="offcanvas-example" data-bs-backdrop="static">
-                <div class="offcanvas-header bg-dark text-light">
-                    <span class="fw-bold fs-5">offcanvas header</span>
-                    <button data-bs-dismiss="offcanvas" class="ms-auto btn btn-danger">close</button>
+                 
+                     <button data-bs-dismiss="offcanvas" class="ms-auto ms-top btn-close btn btn-danger "></button>
+                
+
+
+                <div>
+                    <img style="width: 70px;" src="../photos/shivaji-maharaj-statue-hd-j75lh8853u0bjsa7.jpg" alt="">
+                    <br><br>
+
+                    <button class="btn-btn-dark" data-bs-toggle="collapse" data-bs-target="#shivaji">Story</button>
+
+                    <div class="collapse" id="shivaji">
+                        <div class="shivaji-story">
+                            <h2>Chhatrapati Shivaji Maharaj – Life Journey</h2>
+                            <ul>
+                                <li><strong>Birth:</strong> Born on 19th February 1630 at Shivneri Fort, Maharashtra.
+                                    Parents: Shahaji Raje and Jijabai.</li>
+                                <li><strong>Inspiration:</strong> Inspired by his mother Jijabai's stories of bravery
+                                    and
+                                    dharma. Took the Swarajya oath at Raireshwar Temple.</li>
+                                <li><strong>Early Achievements:</strong> Captured Torna Fort at age 16 and started
+                                    building
+                                    his kingdom.</li>
+
+                                <li><strong>Good Governance:</strong> Promoted justice, respected all religions, and
+                                    protected common people and women.</li>
+                                <li><strong>Legacy:</strong> Died in 1680. Remembered as a great warrior, wise ruler,
+                                    and a
+                                    national hero of India.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="offcanvas-body">
-                    <h1>offcanvas body</h1>
-                </div>
+               
+
+
+
             </div>
 
         </div>
+
+        <h1><b>Recreate</b></h1>
+        <div class="container-fluid py-5">
+            <div class="container border bg-dark border-5 border-dark p-5">
+
+                <!-- trigger -->
+                <button class="btn btn-primary" data-bs-target="#offcanvas-example" data-bs-toggle="offcanvas">
+                    open offcanvas
+                </button>
+
+
+
+                <div class="offcanvas offcanvas-start" id="offcanvas-example" data-bs-backdrop="static">
+                    <div class="offcanvas-header bg-dark text-success">
+                        <span class="fw-bold fs-5">Headerr</span>
+                        <button data-bs-dismiss="offcanvas" class="ms-auto btn btn-info">close</button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <h1>offcanvas body</h1>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
+
 </body>
 
 </html>

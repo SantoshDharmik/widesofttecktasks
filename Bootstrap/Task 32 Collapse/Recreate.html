@@ -1,15 +1,115 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <h1><b>STORY</b></h1>
     <link rel="stylesheet" href="../bootstrap-5/css/bootstrap.css">
     <script src="../bootstrap-5/js/bootstrap.bundle.min.js"></script>
 </head>
+
 <body>
-    
+    <div claass="container-fluid">
+        <div class="container mt-5 p-5 border border-5 border-dark d-flex gap-5">
+
+            <div>
+                <img style="width: 70px;" src="../photos/shivaji-maharaj-statue-hd-j75lh8853u0bjsa7.jpg" alt="">
+                <br><br>
+
+                <button class="btn-btn-dark" data-bs-toggle="collapse" data-bs-target="#ash">Story</button>
+
+                <div class="collapse" id="ash">
+                    <div class="shivaji-story">
+                        <h2>Chhatrapati Shivaji Maharaj – Life Journey</h2>
+                        <ul>
+                            <li><strong>Birth:</strong> Born on 19th February 1630 at Shivneri Fort, Maharashtra.
+                                Parents: Shahaji Raje and Jijabai.</li>
+                            <li><strong>Inspiration:</strong> Inspired by his mother Jijabai's stories of bravery and
+                                dharma. Took the Swarajya oath at Raireshwar Temple.</li>
+                            <li><strong>Early Achievements:</strong> Captured Torna Fort at age 16 and started building
+                                his kingdom.</li>
+                            <li><strong>Military Skills:</strong> Known for Guerrilla warfare tactics and smart
+                                strategies in battles.</li>
+                            <li><strong>Major Events:</strong>
+                                <ul>
+                                    <li>Captured forts like Rajgad, Purandar, and Sinhagad.</li>
+                                    <li>Attacked Shaista Khan in Lal Mahal, Pune.</li>
+                                    <li>Escaped from Aurangzeb’s court in Agra using fruit baskets.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Coronation:</strong> Crowned as Chhatrapati in 1674 at Raigad Fort, forming the
+                                Maratha Empire.</li>
+                            <li><strong>Good Governance:</strong> Promoted justice, respected all religions, and
+                                protected common people and women.</li>
+                            <li><strong>Legacy:</strong> Died in 1680. Remembered as a great warrior, wise ruler, and a
+                                national hero of India.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <img style="width: 60px;"
+                    src="../photos/sambhaji-maharaj-painting-art-chhatrapati-sambhaji-maharaj-maratha-emperor-thumbnail.jpg"
+                    alt=""> <br> <br>
+
+                <button class="btn-btn-dark" data-bs-toggle="collapse" data-bs-target="#ash1">Story</button>
+
+                <div class="collapse" id="ash1">
+                    <div class="sambhaji-story">
+                        <h2>Chhatrapati Sambhaji Maharaj – Life Journey</h2>
+                        <ul>
+                            <li><strong>Birth:</strong> Born on 14th May 1657 at Purandar Fort, Maharashtra. Son of
+                                Chhatrapati Shivaji Maharaj and Maharani Saibai.</li>
+                            <li><strong>Education:</strong> Highly educated; fluent in Sanskrit, Marathi, Persian, and
+                                other languages. Also known for his intelligence and bravery from a young age.</li>
+                            <li><strong>Military Training:</strong> Trained in warfare, politics, and administration
+                                under the guidance of Shivaji Maharaj.</li>
+                            <li><strong>Ascension to Throne:</strong> Became Chhatrapati in 1681 after the death of
+                                Shivaji Maharaj.</li>
+                            <li><strong>Rule and Resistance:</strong>
+                                <ul>
+                                    <li>Fought bravely against the Mughal emperor Aurangzeb’s forces.</li>
+                                    <li>Defended the Maratha Empire with strength and determination despite limited
+                                        resources.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Capture and Torture:</strong> Captured by Mughal forces in 1689 after betrayal.
+                                Refused to convert to Islam.</li>
+                            <li><strong>Martyrdom:</strong> Brutally tortured and executed by Aurangzeb at the age of
+                                just 31, for standing strong in his faith and nation.</li>
+                            <li><strong>Legacy:</strong> Remembered as a fearless and loyal Maratha warrior who chose
+                                death over dishonor.</li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div>
+                <img style="width:140px;" src="../photos/shivaji and sambhagi both.jpeg" alt="">
+
+                <button class="btn-btn-dark" data-bs-toggle="collapse" data-bs-target="#ash,#ash1">BOTH</button>
+                <br>
+                <div class="collapse" id="ash,ash1"></div>
+
+            </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+
+    <br><br><br>
+    <h1><b>Recreate</b></h1>
     <div class="container-fluid">
         <div class="container mt-5 p-5 border border-dark">
 
@@ -17,15 +117,28 @@
 
             <a href="#element2" data-bs-toggle="collapse">link</a>
 
+            <button data-bs-toggle="collapse" data-bs-target="#element1,#element2" class="btn btn-dark ">Both</button>
+
+
+
             <div class="collapse" id="element1">
                 <div class="bg-danger p-5"></div>
             </div>
+
             <div class="collapse" id="element2">
                 <div class="bg-primary p-5"></div>
             </div>
+
+            <div class="coolapse" id="#element1,#element2">
+                
+
+            </div>
+
+
 
         </div>
     </div>
 
 </body>
+
 </html>
