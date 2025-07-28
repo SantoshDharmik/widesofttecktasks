@@ -1,61 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../bootstrap-5/css/bootstrap.css">
     <script src="../bootstrap-5/js/bootstrap.bundle.min.js"></script>
-    <h1><b>OFFCANVAS VARIATION</b></h1>
 </head>
+
 <body>
-    <b>Example</b>
-    <div class="container-fluid py-5">
-        <div class="container border bg-dark border-3 border-dark p-5">
-            <!-- trigger part -->
-            <button class="btn btn-danger mx-5 px-5" data-bs-toggle="offcanvas" data-bs-target="#ex-offcanvas">
-                Click
-            </button>
-
-            <!-- target part -->
-            <div class="offcanvas offcanvas-start" id="ex-offcanvas" data-bs-backdrop="static">
-
-                 
-                     <button data-bs-dismiss="offcanvas" class="ms-auto ms-top btn-close btn btn-danger "></button>
-                
-
-
-                <div>
-                    <img style="width: 70px;" src="../photos/shivaji-maharaj-statue-hd-j75lh8853u0bjsa7.jpg" alt="">
-                    <br><br>
-
-                    <button class="btn-btn-dark" data-bs-toggle="collapse" data-bs-target="#shivaji">Story</button>
-
-                    <div class="collapse" id="shivaji">
-                        <div class="shivaji-story">
-                            <h2>Chhatrapati Shivaji Maharaj – Life Journey</h2>
-                            <ul>
-                                <li><strong>Birth:</strong> Born on 19th February 1630 at Shivneri Fort, Maharashtra.
-                                    Parents: Shahaji Raje and Jijabai.</li>
-                                <li><strong>Inspiration:</strong> Inspired by his mother Jijabai's stories of bravery
-                                    and
-                                    dharma. Took the Swarajya oath at Raireshwar Temple.</li>
-                                <li><strong>Early Achievements:</strong> Captured Torna Fort at age 16 and started
-                                    building
-                                    his kingdom.</li>
-
-                                <li><strong>Good Governance:</strong> Promoted justice, respected all religions, and
-                                    protected common people and women.</li>
-                                <li><strong>Legacy:</strong> Died in 1680. Remembered as a great warrior, wise ruler,
-                                    and a
-                                    national hero of India.</li>
-                            </ul>
-                        </div>
-                    </div>
+    <div class="container-fluid">
+        <b>Offcanvas components show and off</b>
+        <div class="container border border-2 border-dark bg-dark p-5">
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasLabel">Offcanvas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-               
+                <div class="offcanvas-body">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam magnam enim odio a obcaecati
+                    non soluta accusantium asperiores, necessitatibus excepturi adipisci repellendus reprehenderit
+                    cupiditate eveniet id, quos labore quo debitis accusamus numquam vel. Eveniet quis cupiditate
+                    dolorem architecto libero nihil doloribus. Consectetur eaque animi autem iusto officia. Praesentium,
+                    impedit iure.
+
+                </div>
+            </div>
+
+        </div>
+
+        <b>Dropdown ex</b>
+        <div class="container my-1 p-3 border border-dark border-3">
+            <!-- triger  -->
+            <button class="btn btn-dark" data-bs-toggle="offcanvas" data-bs-target="#excanvas">click here for
+                start</button>
+
+            <button class="btn btn-dark" data-bs-toggle="offcanvas" data-bs-target="#excanvas">START</button>
+
+            <!-- target  -->
+            <div class="offcanvas offcanvas-start" id="excanvas">
+                <button data-bs-dismiss="offcanvas" class="ms-auto ms-top btn-close btn btn-danger "></button>
+                <div class="offcanvas-header fw-bold">OFFCANVAS START</div>
+                <div class="offcanvas-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae corrupti
+                    iure. this thehjbcbsabcjbjcbjwab
+                    <div class="dropbottom mt-3">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            data-bs-target="#drop">Dropdown</button>
+                        <ul class="dropdown-menu" id="drop">
+                            <li class="dropdown-item">Action</li>
+                            <li class="dropdown-item">Another action</li>
+                            <li class="dropdown-item">Something else here</li>
+                        </ul>
+
+                    </div>
+
+                </div>
 
 
+
+            </div>
+
+
+
+
+        </div>
+
+        <b>Body Scrolling static</b>
+        <div class="container my-1 p-3 border border-dark border-3">
+            <!-- triger  -->
+
+            <button class="btn btn-dark" data-bs-toggle="offcanvas" data-bs-target="#bodyscroll">Enable body
+                scrolling</button>
+
+            <!-- target  -->
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="static" id="bodyscroll">
+                <button data-bs-dismiss="offcanvas" class="ms-auto ms-top btn-close btn btn-danger "></button>
+                <div class="offcanvas-header fw-bold">OFFCANVAS START</div>
+                <div class="offcanvas-body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt
+                    accusantium non officia, autem in possimus facere, unde dolorem quod consectetur, perferendis
+                    reiciendis necessitatibus quam. Praesentium ea quaerat sunt sed magnam eligendi, aliquam facere
+                    dolorum dignissimos possimus magni similique ullam eos.
+
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+         <b>Body Scrolling flase</b>
+        <div class="container my-1 p-3 border border-dark border-3">
+            <!-- triger  -->
+
+            <button class="btn btn-dark" data-bs-toggle="offcanvas" data-bs-target="#bodyscroll2">Enable body
+                scrolling</button>
+
+            <!-- target  -->
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" id="bodyscroll2">
+                <button data-bs-dismiss="offcanvas" class="ms-auto ms-top btn-close btn btn-danger "></button>
+                <div class="offcanvas-header fw-bold">OFFCANVAS START</div>
+                <div class="offcanvas-body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt
+                    accusantium non officia, autem in possimus facere, unde dolorem quod consectetur, perferendis
+                    reiciendis necessitatibus quam. Praesentium ea quaerat sunt sed magnam eligendi, aliquam facere
+                    dolorum dignissimos possimus magni similique ullam eos.
+
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+         <b>Body Scrolling and backdrop</b>
+        <div class="container my-1 p-3 border border-dark border-3">
+            <!-- triger  -->
+
+            <button class="btn btn-dark" data-bs-toggle="offcanvas" data-bs-target="#nobackdrop">Enable both
+                scrolling and backdrop</button>
+
+            <!-- target  -->
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true"  id="nobackdrop">
+                <button data-bs-dismiss="offcanvas" class="ms-auto ms-top btn-close btn btn-danger "></button>
+                <div class="offcanvas-header fw-bold">OFFCANVAS START</div>
+                <div class="offcanvas-body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt
+                    accusantium non officia, autem in possimus facere, unde dolorem quod consectetur, perferendis
+                    reiciendis necessitatibus quam. Praesentium ea quaerat sunt sed magnam eligendi, aliquam facere
+                    dolorum dignissimos possimus magni similique ullam eos.
+
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <b>Placement Start</b>
+        <div class="container my-1 p-3 border border-dark border-3">
+            <!-- triger  -->
+
+            <button class="btn btn-dark" data-bs-toggle="offcanvas" data-bs-target="#bodyscroll">Enable body
+                scrolling</button>
+
+            <!-- target  -->
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="static" id="bodyscroll">
+                <button data-bs-dismiss="offcanvas" class="ms-auto ms-top btn-close btn btn-danger "></button>
+                <div class="offcanvas-header fw-bold">OFFCANVAS START</div>
+                <div class="offcanvas-body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt
+                    accusantium non officia, autem in possimus facere, unde dolorem quod consectetur, perferendis
+                    reiciendis necessitatibus quam. Praesentium ea quaerat sunt sed magnam eligendi, aliquam facere
+                    dolorum dignissimos possimus magni similique ullam eos.
+
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <b>Placement End</b>
+        <div class="container my-1 p-3 border border-dark border-3">
+            <!-- triger  -->
+
+            <button class="btn btn-dark" data-bs-toggle="offcanvas" data-bs-target="#End">Enable body
+                scrolling</button>
+
+            <!-- target  -->
+            <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="static" id="End">
+                <button data-bs-dismiss="offcanvas" class="ms-auto ms-top btn-close btn btn-danger "></button>
+                <div class="offcanvas-header fw-bold">OFFCANVAS START</div>
+                <div class="offcanvas-body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt
+                    accusantium non officia, autem in possimus facere, unde dolorem quod consectetur, perferendis
+                    reiciendis necessitatibus quam. Praesentium ea quaerat sunt sed magnam eligendi, aliquam facere
+                    dolorum dignissimos possimus magni similique ullam eos.
+
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <b>Placement top</b>
+        <div class="container my-1 p-3 border border-dark border-3">
+            <!-- triger  -->
+
+            <button class="btn btn-dark" data-bs-toggle="offcanvas" data-bs-target="#top">Enable body
+                scrolling</button>
+
+            <!-- target  -->
+            <div class="offcanvas offcanvas-top" data-bs-scroll="true" data-bs-backdrop="static" id="top">
+                <button data-bs-dismiss="offcanvas" class="ms-auto ms-top btn-close btn btn-danger "></button>
+                <div class="offcanvas-header fw-bold">OFFCANVAS START</div>
+                <div class="offcanvas-body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt
+                    accusantium non officia, autem in possimus facere, unde dolorem quod consectetur, perferendis
+                    reiciendis necessitatibus quam. Praesentium ea quaerat sunt sed magnam eligendi, aliquam facere
+                    dolorum dignissimos possimus magni similique ullam eos.
+
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <b>Placement Bottom</b>
+        <div class="container my-1 p-3 border border-dark border-3">
+            <!-- triger  -->
+
+            <button class="btn btn-dark" data-bs-toggle="offcanvas" data-bs-target="#bottom">Enable body
+                scrolling</button>
+
+            <!-- target  -->
+            <div class="offcanvas offcanvas-bottom" data-bs-scroll="true" data-bs-backdrop="static" id="bottom">
+                <button data-bs-dismiss="offcanvas" class="ms-auto ms-top btn-close btn btn-danger "></button>
+                <div class="offcanvas-header fw-bold">OFFCANVAS START</div>
+                <div class="offcanvas-body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt
+                    accusantium non officia, autem in possimus facere, unde dolorem quod consectetur, perferendis
+                    reiciendis necessitatibus quam. Praesentium ea quaerat sunt sed magnam eligendi, aliquam facere
+                    dolorum dignissimos possimus magni similique ullam eos.
+
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <b>Responsive for lg</b>
+        <div class="container my-1 p-3 border border-dark border-3">
+            <!-- triger  -->
+
+            <button class="btn btn-dark d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#responsive">toggle offcanvas</button>
+
+            <div class="alert alert-warning d-none d-lg-block">Resize your browser to show the responsive offcanvas toggle.</div>
+
+            <!-- target  -->
+            <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="true" id="responsive">
+                <button data-bs-dismiss="offcanvas" class="ms-auto ms-top btn-close btn btn-danger "></button>
+                <div class="offcanvas-header fw-bold">Responsive OFFcanvas for lg</div>
+                <div class="offcanvas-body">This is content within an .offcanvas-lg.
+
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <b>Responsive for Md</b>
+        <div class="container my-1 p-3 border border-dark border-3">
+            <!-- triger  -->
+
+            <button class="btn btn-dark d-md-none" data-bs-toggle="offcanvas" data-bs-target="#responsivemd">toggle offcanvas</button>
+
+            <div class="alert alert-danger d-none d-md-block">Resize your browser to show the responsive offcanvas toggle.</div>
+
+            <!-- target  -->
+            <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="true" id="responsivemd">
+                <button data-bs-dismiss="offcanvas" class="ms-auto ms-top btn-close btn btn-danger "></button>
+                <div class="offcanvas-header fw-bold">Responsive OFFcanvas for lg</div>
+                <div class="offcanvas-body">This is content within an .offcanvas-lg.
+
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <b>Responsive for sm</b>
+        <div class="container my-1 p-3 border border-dark border-3">
+            <!-- triger  -->
+
+            <button class="btn btn-dark d-sm-none" data-bs-toggle="offcanvas" data-bs-target="#responsive">toggle offcanvas</button>
+
+            <div class="alert alert-info d-none d-sm-block">Resize your browser to show the responsive offcanvas toggle.</div>
+
+            <!-- target  -->
+            <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="true" id="responsive">
+                <button data-bs-dismiss="offcanvas" class="ms-auto ms-top btn-close btn btn-danger "></button>
+                <div class="offcanvas-header fw-bold">Responsive OFFcanvas for lg</div>
+                <div class="offcanvas-body">This is content within an .offcanvas-lg.
+
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
 
 </body>
+
 </html>
