@@ -1,12 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap-5/css/bootstrap.css">
+    <script src="../bootstrap-5/js/bootstrap.bundle.min.js"></script>
     <h1><b>NAVBAR VARIATION</b></h1>
 </head>
+
 <body>
-    
+<b>Supported content</b>
+    <div class="container-fluid bg-secondary">
+        
+        <div class="container">
+            <nav class="navbar navbar-expand-md navbar-dark bg-secondary">
+                <span class="navbar-brand fw-bolder fs-5">Navbar</span>
+
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mobile-menu1">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mobile-menu1">
+
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Service</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex gap-4">
+                        <input class="form-control" type="search" placeholder="search here...">
+                        <button class="btn btn-success">search</button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <br><br>
+<b>Brand</b>
+    <div class="container-fluid bg-secondary">
+        <div class="container">
+            <!-- As a link -->
+            <nav class="navbar bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Navbar</a>
+                </div>
+            </nav>
+            <br><br>
+
+            <!-- As a heading -->
+            <nav class="navbar bg-dark">
+                <div class="container-fluid">
+                    <span class="navbar-brand mb-0 h1">Navbar</span>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <br><br>
+<b>image</b>
+    <div class="container-fluid bg-secondary">
+        <div class="container">
+            <nav class="navbar bg-dark">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img src="../photos/turtal.jpeg" alt="Bootstrap" width="50" height="50">
+                    </a>
+                </div>
+            </nav>
+
+        </div>
+    </div>
+    <br><br>
+<b>Navbar</b>
+     <div class="container-fluid bg-secondary">
+        <div class="container">
+            <nav class="navbar bg-dark">
+                
+                    <a class="navbar-brand" href="#">
+                        <img class="m-2"src="../photos/turtal.jpeg" alt="Bootstrap" width="50" height="50"><span class="photo text-light fs-2 fst-italic fw-bold">Turtal</span>
+                    </a>
+                
+            </nav>
+
+        </div>
+    </div>
+    <br><br>
+
+    <b>Navbar</b>
+
+    <div class="container-fluid bg-secondary">
+        <div class="container">
+
+    <nav class="navbar navbar-expand-lg bg-info">
+  
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  
+</nav>
+</div>
+    </div>
+<br><br>
+<b>Forms navbar</b>
+<div class="container-fluid bg-secondary">
+        <div class="container">
+
+            <nav class="navbar bg-light">
+  
+    <a class="navbar-brand">Navbar</a>
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+ 
+</nav>
+
+            </div>
+    </div>
+
+
 </body>
+
 </html>
