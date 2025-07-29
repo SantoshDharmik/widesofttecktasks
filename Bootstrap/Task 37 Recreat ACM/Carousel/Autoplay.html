@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../bootstrap-5/css/bootstrap.css">
+    <script src="../../bootstrap-5/js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+    <style>
+        .carousel-item {
+            height: 400px; we: 100px;
+           
+        }
+
+        .carousel-item span {
+            width: 100%;
+            height: 100%;
+            color: black !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        
+        
+    </style>
+</head>
+<body>
+     <div class="container-fluid">
+        <b>AUTOPLAY </b>
+        <div class="container border border-2 border-dark p-5">
+            <!-- corousel -->
+            <div class="carousel slide carousel-fade" id="carousel-ex1" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <span class="placeholder col-12 bg-danger">
+                            <span class="fs-3 fw-bloder text-dark">Slide-1</span>
+                        </span>
+                    </div>
+                    <div class="carousel-item"> <span class="placeholder col-12 bg-warning">
+                            <span class="fs-3 fw-bloder text-dark">Slide-2</span>
+                        </span></div>
+                    <div class="carousel-item"> <span class="placeholder col-12 bg-primary">
+                            <span class="fs-3 fw-bloder text-dark">Slide-3</span>
+                        </span></div>
+                    <div class="carousel-item"> <span class="placeholder col-12 bg-info">
+                            <span class="fs-3 fw-bloder text-dark">Slide-4</span>
+                        </span></div>
+                    <div class="carousel-item"> <span class="placeholder col-12 bg-light">
+                            <span class="fs-3 fw-bloder text-dark">Slide-5</span>
+                        </span></div>
+                    <div class="carousel-item"> <span class="placeholder col-12 bg-dark">
+                            <span class="fs-3 fw-bloder text-dark">Slide-6</span>
+                        </span></div>
+                    <div class="carousel-item"> <span class="placeholder col-12 bg-success">
+                            <span class="fs-3 fw-bloder text-dark">Slide-7</span>
+                        </span></div>    
+
+                </div>
+                <!-- controls -->
+                <button class="carousel-control-prev" data-bs-target="#carousel-ex1" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" data-bs-target="#carousel-ex1" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+
+
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
