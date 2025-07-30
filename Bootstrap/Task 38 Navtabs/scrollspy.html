@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap-5/css/bootstrap.css">
+    <script src="../bootstrap-5/js/bootstrap.bundle.min.js"></script>
+     <style>
+        .child {
+            height: 400px;
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::before {
+            content: "";
+            width: 0%;
+            height: 1px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color:blueviolet;
+            transition: all 0.5s ease;
+        }
+
+        .nav-link.active::before {
+            width: 100%;
+        }
+
+        .nav-link.active {
+            background-color: transparent !important;
+        }
+        .sk{
+            height:100px;
+            border: none;
+        }
+        img{
+            width: 100px;
+            height: 500px;
+            border: .5rem solid black;
+            
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar">
+    <div class="container-fluid bg-dark position-sticky top-0">
+        <div class="container">
+            <nav id="navbar" class="navbar navbar-expand navbar-dark bg-dark">
+                <img class="sk  navbar-brand fw-bolder fs-3 w-25"src="../Task 31 Navbar/photos/digital-art-cute-dog.png" alt="">
+                <ul class="navbar-nav nav-pills ms-auto">
+                    <li class="nav-item"><a class="nav-link "href="#child1">child1</a></li>
+                    <li class="nav-item"><a class="nav-link "href="#child2">child2</a></li>
+                    <li class="nav-item"><a class="nav-link "href="#child3">child3</a></li>
+                    <li class="nav-item"><a class="nav-link "href="#child4">child4</a></li>
+                    <li class="nav-item"><a class="nav-link "href="#child5">child5</a></li>
+                    <li class="nav-item"><a class="nav-link "href="#child6">child6</a></li>
+                    <li class="nav-item"><a class="nav-link "href="#child7">child7</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link "href="#child8">child8</a></li>
+                    <li class="nav-item"><a class="nav-link "href="#child9">child9</a></li>
+                    <li class="nav-item"><a class="nav-link "href="#child10">child10</a></li> -->
+                </ul>
+            </nav>
+
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="container">
+            <!-- <img class="image-fluid w-100"src="../photos/download.png" id="child1" alt="">
+            <img class="image-fluid w-100"src="../photos/download.png" id="child2" alt="">
+            <img class="image-fluid w-100"src="../photos/download.png" id="child3" alt="">
+            <img class="image-fluid w-100"src="../photos/download.png" id="child4" alt="">
+            <img class="image-fluid w-100"src="../photos/download.png" id="child5" alt="">
+            <img class="image-fluid w-100"src="../photos/download.png" id="child6" alt="">
+            <img class="image-fluid w-100"src="../photos/download.png" id="child7" alt=""> -->
+
+            <img id="child1" class="image-fluid w-100" src="../photos/download.jpeg" alt="">
+            <img id="child2" class="image-fluid w-100" src="../photos/download.png" alt="">
+            <img id="child3" class="image-fluid w-100" src="../photos/images (1).jpeg" alt="">
+            <img id="child4" class="image-fluid w-100" src="../photos/images.jpeg" alt="">
+            <img id="child5" class="image-fluid w-100" src="../photos/sambhaji-maharaj-painting-art-chhatrapati-sambhaji-maharaj-maratha-emperor-thumbnail.jpg" alt="">
+            <img  id="child5" class="image-fluid w-100" src="../photos/shivaji and sambhagi both.jpeg" alt="">
+            <img id="child6" class="image-fluid w-100" src="../photos/shivaji-maharaj-statue-hd-j75lh8853u0bjsa7.jpg" alt="">
+            <img id="child7" class="image-fluid w-100" src="../photos/turtal.jpeg" alt="">
+
+
+            
+
+        </div>
+
+    </div>
+</body>
+
+</html>

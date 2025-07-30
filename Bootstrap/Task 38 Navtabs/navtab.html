@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap-5/css/bootstrap.css">
+    <script src="../bootstrap-5/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .nav-tabs .nav-item {
+            flex: 1 1;
+        }
+
+        .nav-tabs .nav-item button {
+            width: 100%;
+            border-radius: 0;
+        }
+
+        .nav-tabs .nav-item button {
+            background-color: rgb(24, 236, 232) !important;
+        }
+
+        .nav-tabs .nav-item button.active {
+            background-color: var(--bs-dark) !important;
+
+        }
+
+        h2 {
+            color: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="container border border-3 border-dark p-5 my-5">
+
+            <div class="row">
+                <div class="col">
+                    <!-- navtabs -->
+                    <ul class="nav-tabs nav gap-4">
+                        <li class="nav-item">
+                            <button data-bs-toggle="tab" data-bs-target="#tab-ex1" class="btn btn-danger active"><b>Tab
+                                    1</b></button>
+                        </li>
+                        <li class="nav-item">
+                            <button data-bs-toggle="tab" data-bs-target="#tab-ex2" class="btn btn-primary"><b>Tab
+                                    2</b></button>
+                        </li>
+                        <li class="nav-item">
+                            <button data-bs-toggle="tab" data-bs-target="#tab-ex3" class="btn btn-secondary"><b>Tab
+                                    3</b></button>
+                        </li>
+                        <li class="nav-item">
+                            <button data-bs-toggle="tab" data-bs-target="#tab-ex4" class="btn btn-success"><b>Tab
+                                    4</b></button>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <button data-bs-toggle="tab" data-bs-target="#tab-ex5" class="btn btn-primary">Tab 5</button>
+                        </li> -->
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <div class="col">
+                <!-- content -->
+                <div class="tab-content">
+                    <div class="tab-pane active show fade" id="tab-ex1">
+                        <h2><u><i>This is tab one story of animals</i></u></h2>
+                        <img class="border border-dark border-5" src="../photos/turtal.jpeg" alt="">
+                        <h4>In a dense forest, a wise old elephant named Elgo was respected by all animals. One day, a
+                            terrible drought struck, and the animals grew desperate. Elgo remembered an ancient river
+                            hidden deep in the jungle. He led the herd through thorns and heat until they found the
+                            flowing water. The forest rejoiced, and Elgo became a legend of unity and courage.
+
+                        </h4>
+
+                    </div>
+                    <div class="tab-pane fade" id="tab-ex2">
+
+                        <h2><u><i>This is tab two story of burd</i></u></h2>
+                        <img class="border border-dark border-5" src="../photos/download.png" alt="">
+                        <h4>High above the mountains, a little sparrow named Sia dreamed of flying beyond the clouds.
+                            Laughed at by other birds, she practiced every day. One stormy afternoon, an eagle got
+                            trapped on a cliff. Sia, using her small wings and big courage, guided help to save him. The
+                            birds no longer laughed. Sia proved even the smallest wings can soar the highest.</h4>
+                    </div>
+                    <div class="tab-pane fade" id="tab-ex3">
+
+                        <h2><u><i>This is tab three story of robots</i></u></h2>
+                        <img class="border border-dark border-5" src="../photos/images.jpeg" alt="">
+                        <h4>In the year 3020, a robot named Zino worked in a scrapyard. He longed to see the stars.
+                            Using broken parts and ancient blueprints, Zino built a tiny spaceship. Though everyone
+                            doubted him, Zino launched into space one night, leaving behind sparks of hope. He became
+                            the first robot explorer, showing machines can dream too.</h4>
+                    </div>
+                    <div class="tab-pane fade" id="tab-ex4">
+
+                        <h2><u><i><b>This is tab four story of humans</b></i></u></h2>
+
+                        <img class="border border-dark border-5 w-25 h-25"
+                            src="../photos/shivaji-maharaj-statue-hd-j75lh8853u0bjsa7.jpg" alt="">
+                        <h4>Long ago in a desert village, a young boy named Aarav loved books. While others sought
+                            treasure, he read every scroll he found. One day, a sandstorm unearthed a hidden cave full
+                            of ancient knowledge. Aarav shared this wisdom, teaching his people to build, grow, and
+                            thrive. The village turned into a great city, all because of one curious human.</h4>
+                    </div>
+                    <!-- <div class="tab-pane fade" id="tab-ex5">
+                        <h1>This is tab five story of snakes</h1>
+                        <h4>In a cool jungle crevice lived a gentle snake named Nila. Unlike others, she healed injured
+                            creatures with her herbal venom. When a fire swept the forest, Nila guided animals
+                            underground to safety. After the flames passed, she emerged a hero. From then on, even the
+                            fiercest feared and respected the healer snake of the forest.</h4>
+                    </div> -->
+
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="container-fluid">
+        <div class="container border border-3 border-dark p-5 my-5">
+
+            <div class="row">
+                <div class="col">
+                    <!-- navtabs -->
+                    <ul class="nav-tabs nav gap-4 flex-column">
+                        <li class="nav-item">
+                            <button data-bs-toggle="tab" data-bs-target="#tab-exself1"
+                                class="btn btn-danger active"><b>Tab 1</b></button>
+                        </li>
+                        <li class="nav-item">
+                            <button data-bs-toggle="tab" data-bs-target="#tab-exself2" class="btn btn-primary"><b>Tab
+                                    2</b></button>
+                        </li>
+                        <li class="nav-item">
+                            <button data-bs-toggle="tab" data-bs-target="#tab-exself3" class="btn btn-secondary"><b>Tab
+                                    3</b></button>
+                        </li>
+                        <li class="nav-item">
+                            <button data-bs-toggle="tab" data-bs-target="#tab-exself4" class="btn btn-success"><b>Tab
+                                    4</b></button>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <button data-bs-toggle="tab" data-bs-target="#tab-ex5" class="btn btn-primary">Tab 5</button>
+                        </li> -->
+                    </ul>
+
+                </div>
+
+
+                <div class="col">
+                    <!-- content -->
+                    <div class="tab-content">
+                        <div class="tab-pane active show fade" id="tab-exself1">
+                            <h2><u><i>This is tab one story of animals</i></u></h2>
+                            <img class="border border-dark border-5" src="../photos/turtal.jpeg" alt="">
+                            <h4>In a dense forest, a wise old elephant named Elgo was respected by all animals. One day,
+                                a
+                                terrible drought struck, and the animals grew desperate. Elgo remembered an ancient
+                                river
+                                hidden deep in the jungle. He led the herd through thorns and heat until they found the
+                                flowing water. The forest rejoiced, and Elgo became a legend of unity and courage.
+
+                            </h4>
+
+                        </div>
+                        <div class="tab-pane fade" id="tab-exself2">
+
+                            <h2><u><i>This is tab two story of burd</i></u></h2>
+                            <img class="border border-dark border-5" src="../photos/download.png" alt="">
+                            <h4>High above the mountains, a little sparrow named Sia dreamed of flying beyond the
+                                clouds.
+                                Laughed at by other birds, she practiced every day. One stormy afternoon, an eagle got
+                                trapped on a cliff. Sia, using her small wings and big courage, guided help to save him.
+                                The
+                                birds no longer laughed. Sia proved even the smallest wings can soar the highest.</h4>
+                        </div>
+                        <div class="tab-pane fade" id="tab-exself3">
+
+                            <h2><u><i>This is tab three story of robots</i></u></h2>
+                            <img class="border border-dark border-5" src="../photos/images.jpeg" alt="">
+                            <h4>In the year 3020, a robot named Zino worked in a scrapyard. He longed to see the stars.
+                                Using broken parts and ancient blueprints, Zino built a tiny spaceship. Though everyone
+                                doubted him, Zino launched into space one night, leaving behind sparks of hope. He
+                                became
+                                the first robot explorer, showing machines can dream too.</h4>
+                        </div>
+                        <div class="tab-pane fade" id="tab-exself4">
+
+                            <h2><u><i><b>This is tab four story of humans</b></i></u></h2>
+
+                            <img class="border border-dark border-5 w-25 h-25"
+                                src="../photos/shivaji-maharaj-statue-hd-j75lh8853u0bjsa7.jpg" alt="">
+                            <h4>Long ago in a desert village, a young boy named Aarav loved books. While others sought
+                                treasure, he read every scroll he found. One day, a sandstorm unearthed a hidden cave
+                                full
+                                of ancient knowledge. Aarav shared this wisdom, teaching his people to build, grow, and
+                                thrive. The village turned into a great city, all because of one curious human.</h4>
+                        </div>
+                        <!-- <div class="tab-pane fade" id="tab-ex5">
+                        <h1>This is tab five story of snakes</h1>
+                        <h4>In a cool jungle crevice lived a gentle snake named Nila. Unlike others, she healed injured
+                            creatures with her herbal venom. When a fire swept the forest, Nila guided animals
+                            underground to safety. After the flames passed, she emerged a hero. From then on, even the
+                            fiercest feared and respected the healer snake of the forest.</h4>
+                    </div> -->
+
+
+
+
+                    </div>
+                    
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+        </div>
+    </div>
+</body>
+
+</html>
