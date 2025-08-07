@@ -1,0 +1,90 @@
+Variable AND Data Type
+
+Variables
+
+scope variable_name assigment oprator(=) data/value(data type);
+    Declearation part    Oprator part      Initialization part
+Ex: let age = 25;    
+let-scope
+age-variable_name
+=-assigment oprator(=)
+25-data/value(data type)
+
+there are 3 common scopes;
+
+var(var is public scope):
+-Introduced earlier in JavaScript.
+-Works only inside the function where it is declared.
+-it is easy to hack
+
+let:
+-Introduced in ES6 (2015)
+-Can be updated, but not re-declared in the same scope.
+Ex:let balance = 5000;
+balance = balanvce + 5000
+output is 10,000
+
+const:
+-Introduced in ES6 (2015)
+-Cannot be updated or changed after being assigned.
+-Use when you don't want the value to change.
+Ex:
+const account = {
+    name : "sk dharmik",
+    phone: 9356192274,
+    address: "nagpur",
+    student: true
+}
+account.phone = 8378073775
+
+output is 
+const account = {
+    name : "sk dharmik",
+    phone: 8378073775,
+    address: "nagpur",
+    student: true
+}
+
+In the Variable the most important 3 rules are followed which are;
+
+(1)Name has to be unique within the same scope
+(2)Name can be alpha-numeric but cannot start with a number.
+(3)No space and no spcial charchters (!@#$%^&*()) within a name , exception which is _ (That's mean we can used the underline)
+Ex:
+right- box_123 box12
+wrong- 12box box%12
+
+
+DATA Types (There are only two  types primitive and non-primitive data types)
+-JavaScript has primitive (simple) and non-primitive (complex) data types to store different kinds of information
+
+Primitive data type:
+-number(int(4Byte), float (4Byte), double(8Byte), long(16Byte), short(2Byte), byte(1Byte)), string (group of charchter "Abc123" ), boolean (true, false) , [NaN(not a number)["A123" -> NaN], Undefined, Null] error data types.
+Ex:-String → Text
+"Hello"
+
+Number → Any number
+25, 3.14
+
+Boolean → True or False
+true, false
+
+Undefined → Variable declared but no value
+let x;
+
+Null → Intentionally empty
+let x = null;
+
+BigInt → Very big numbers
+123456789012345678901n
+
+Non-primitive:
+-array(collections of element), object(key:value pairs), function/method/module
+ex:-Array → List of values
+[1, 2, 3]
+
+Object → Key-value pairs
+{ name: "Amit", age: 25 }
+
+Function → Reusable code block
+function greet() {}

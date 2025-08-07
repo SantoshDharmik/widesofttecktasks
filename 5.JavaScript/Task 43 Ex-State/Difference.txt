@@ -1,0 +1,30 @@
+Difference between Expression and Statement
+
+1. Expression:
+-An expression is anything that produces a value.
+-It can be stored in a variable or used inside other expressions.
+Examples:
+5 + 3              // 8 (Expression)
+"Hello"            // String Expression
+a = 10             // Assignment Expression
+-Expressions return a value.
+
+ 2. Statement
+-A statement performs an action.
+-It may contain expressions inside it.
+-It controls the flow of the program.
+Examples:
+let x = 5;         // Variable declaration (Statement)
+if (x > 0) {       // if statement
+console.log(x);  // another statement
+}
+-Statements do not return a value directly — they just do something.
+
+let we consider 
+js
+
+let a = 10;       // Statement
+let b = a + 5;    // Statement (contains expression `a + 5`)
+
+-a + 5 is an expression (gives value)
+-let b = a + 5; is a statement (performs the action of assigning)

@@ -1,0 +1,72 @@
+Just a short summary for javascript
+important timeline and updates in javascript
+
+-1995:JavaScript was created by Brendan Eich at Netscape. It was first called Mocha, then LiveScript, and finally JavaScript.
+
+1997-JavaScript was standardized as ECMAScript (ES) by ECMA International (to ensure all browsers follow the same rules).
+
+2009-Node.js was released — allowing JavaScript to run on servers. 
+
+2015-Big update: ES6 (ECMAScript 6) introduced modern features like let, const, arrow functions, classes, etc.
+
+Now-JavaScript is one of the most popular languages for web development, used in both frontend and backend.
+
+-Created in 1995 by Brendan Eich
+First called Mocha → LiveScript → JavaScript
+Standardized as ECMAScript (ES)
+Used in browsers and servers (with Node.js)
+Constantly evolving with new features (ES6, ES7, etc.)
+
+Introduction to JavaScript
+
+-Basically javascript is a programming language that makes websites interactive and alive
+-It runs in the browser which means when you click buttons, open menus, or see animations-that's often JavaScript at work
+-It is also higher level programming language, which is interpreted
+-JS support both approches (POP, OOP)
+
+Why Do We Use JavaScript:
+
+-Without JS, websites would be just plain pages with only text and images (like a book)
+
+-With JS, we can:
+
+Create interactive buttons
+Show pop-ups and alerts
+Make games and apps
+Update content without reloading the page
+
+Scope:
+
+-web development(ExpressReactNode), mobile development(React Native), desktop development(Electron.js)
+
+(client side js / server side js)
+
+-Client-side JS means JavaScript code runs in the browser (like Chrome, Firefox, etc.) on the user’s computer.
+
+Used For:
+Showing or hiding content
+Handling button clicks
+Validating forms (like checking email format)
+Animations and effects
+Live content updates (without page reload)
+
+-Server-side JS means JavaScript runs on a server using tools like Node.js.It’s used to handle data, connect to databases, and manage the backend of web applications.
+
+Used For:
+Saving form data
+Sending emails
+Getting data from a database
+User login and authentication
+Making APIs work
+
+Easy Way to Remember:
+Client-side JS = Works on your screen
+Server-side JS = Works behind the scenes
+
+-dynamically typed language (JS, Python) 
+/ Static typed language(C , C++, JAVA, TypeScritp)
+
+
+
+
+
