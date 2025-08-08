@@ -78,3 +78,70 @@
 #header .nav-link.active::before {
     width: 100%;
 }
+
+/* hero section */
+
+#hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+}
+
+#hero>.background {
+    background-image: repeating-radial-gradient(circle, rgba(var(--accent3RGB), 1) 0px, rgba(var(--accent3RGB), 1) 1px, transparent 2px, transparent 100%);
+    background-size: 18px 18px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+#hero>.content {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background: linear-gradient(110deg, rgba(0, 0, 0, 0) 50%, rgba(var(--accent3RGB), 1) 50%);
+}
+
+/* perk  */
+
+#about .perk-section {
+    width: 100%;
+    padding: 0.5rem 8rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.perk-section>.text-data {
+    grid-column: 1 / span 2;
+}
+
+#about .perk-section>.tile {
+    background-color: rgba(var(--darkRGB), .5);
+    border: .1rem solid rgba(var(--accent3RGB), 1);
+    border-radius: 8px;
+}
+
+.tile {
+    transition: all 0.5s ease;
+    height: 300px;
+}
+
+.tile:hover {
+    background: rgba(var(--accent3RGB), 1) !important;
+}
+
+.tile:hover>.icon>img {
+    filter: brightness(0);
+}
+
+@media screen and (max-width: 576px) {
+   #about .perk-section {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+   } 
+}
