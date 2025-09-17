@@ -5,7 +5,7 @@ let app = express()
 let port = 4000 
 
 app.get("/",(request,response)=>{
-    response.send(` <h1 style="color:skyblue"> Welcome to my first node js server</h1>
+    response.send(` <h1 style="color:blue"> Welcome to my first node js server</h1>
          <h2>Contact Form</h2>
   <form action="/submit" method="POST">
     <label for="name">Name:</label><br>
@@ -17,7 +17,7 @@ app.get("/",(request,response)=>{
     <label for="message">Message:</label><br>
     <textarea id="message" name="message" rows="4" cols="30" required></textarea><br><br>
 
-    <button type="submit">Submit</button>
+    <button type="submit">Submit The Form</button>
   </form>`)
 })
 
