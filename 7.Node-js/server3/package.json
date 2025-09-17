@@ -1,16 +1,17 @@
 {
-  "name": "server1",
+  "name": "server3",
   "version": "1.0.0",
-  "description": "\"To learn import and export \"",
+  "description": "\"create server 2\"",
   "main": "server.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start" : "node server.js"
+    "start": "nodemon server.js"
   },
-  "author": "\"sk dharmik\"",
+  "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^17.2.2",
     "express": "^5.1.0"
   }
 }

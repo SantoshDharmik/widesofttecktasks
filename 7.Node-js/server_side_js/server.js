@@ -2,7 +2,7 @@ import express from "express"
 
 let app = express()
 
-let port = 4000 
+let port = 4001
 
 app.get("/",(request,response)=>{
     response.send(` <h1 style="color:blue"> Welcome to my first node js server</h1>
