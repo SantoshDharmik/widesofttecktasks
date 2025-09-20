@@ -1,0 +1,68 @@
+<%- include("./partials/header.ejs") %>
+
+
+
+<div class="form-style">
+    <h2>Hello user i'm santosh, Fill these form </h2>
+    <form action="/submit-form" method="POST" class="d-flex flex-column gap-2">
+
+        <label for="fname">First-Name</label>
+        <input type="text" id="fname" placeholder="Enter your first name" name="fname" required> <br>
+
+        <label for="mname">Mid-Name</label>
+        <input type="text" id="mname" placeholder="Enter your middle name" name="mname" required> <br>
+
+        <label for="lname">Sir-Name</label>
+        <input type="text" id="lname" placeholder="Enter your last name" name="lname" required> <br>
+
+        <label for="phone">Phone no.</label>
+        <input type="text" id="phone" placeholder="Enter your phone number" name="phone" required> <br>
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" placeholder="Enter your email" name="email" required> <br>
+
+        <label for="address">Address</label>
+        <textarea id="address" placeholder="Enter your address" name="address" rows="3" required></textarea> <br>
+
+        <!-- New fields -->
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender" required>
+            <option value="">--Select Gender--</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select> <br>
+
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob" required> <br>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter password" name="password" required> <br>
+
+        <label for="cpassword">Confirm Password</label>
+        <input type="password" id="cpassword" placeholder="Re-enter password" name="cpassword" required> <br>
+
+        <label>Hobbies</label>
+        <div>
+            <input type="checkbox" id="reading" name="hobbies" value="Reading"> <label for="reading">Reading</label>
+            <input type="checkbox" id="sports" name="hobbies" value="Sports"> <label for="sports">Sports</label>
+            <input type="checkbox" id="music" name="hobbies" value="Music"> <label for="music">Music</label>
+        </div> <br>
+
+        <label for="city">City</label>
+        <select id="city" name="city" required>
+            <option value="">--Select City--</option>
+            <option value="delhi">Delhi</option>
+            <option value="mumbai">Mumbai</option>
+            <option value="bangalore">Bangalore</option>
+            <option value="kolkata">Kolkata</option>
+        </select> <br>
+
+        <label for="comments">Additional Comments</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Write something..."></textarea> <br>
+
+        <button class="btn btn-dark">Submit</button>
+    </form>
+</div>
+
+<%- include("./partials/footer.ejs") %>    
