@@ -7,6 +7,6 @@ let router = express.Router();
 
 router.get("/home",gethome)
 
-router.post("/api/:name/:phone/:age/:address/:email", postHome);
+router.get("/api/:name/:phone/:age/:address/:email", postHome);
 
 export default router;

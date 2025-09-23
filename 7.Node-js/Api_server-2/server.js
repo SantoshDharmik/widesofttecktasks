@@ -12,9 +12,16 @@ let port = process.env.port || 4007
 
 app.use(express.urlencoded({ extended: true}))
 
+app.use(express.json())
+
 app.use(express.static("public"))
 
+app.get('/', (req,res) => {
+    res.redirect("/languages/api/get-details")
+})
+
 app.use("/languages/api", router)
+// we can write these api all time and the continue filters
 
 app.use((req,res) => {
     console.log("someone is trying to access a 404 route ! ")
