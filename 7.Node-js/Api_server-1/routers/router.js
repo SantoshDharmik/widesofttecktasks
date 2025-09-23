@@ -1,11 +1,12 @@
+// Query parameter 
 import express from "express"
 
-import { getHome,getSomewhere } from "../controllers/controller.js"
+import { gethome, postHome } from "../controllers/controller.js"
 
-let router = express.Router()
+let router = express.Router();
 
-router.get("/", getHome)
+router.get("/home",gethome)
 
-router.get("/somewhere/:name/:phone", getSomewhere)
+router.post("/api/:name/:phone/:age/:address/:email", postHome);
 
-export {router}
+export default router;

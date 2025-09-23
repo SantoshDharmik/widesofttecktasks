@@ -1,24 +1,29 @@
-let getHome = (req, res) => {
-    try {
-        let {name, phone} = req.query
-        if (!name || !phone) throw ("requested data was not found please send name and phone number !")
+// Query parameter 
 
-        // query parameters
-        console.log(name)
-        console.log(phone)
-        res.status(200).json({ message: `hello ${name} !` })
-    } catch (err) {
-        console.log("an error occured ", err)
-        res.status(400).json({ message: err })
-    }
-    }
+// Controller function for query parameter
+const gethome = (req, res) => {
+    let {name, phone, age, address, email} = req.query;
 
-let getSomewhere = (req, res) => {
-    console.log(req.params)
-    let { name } = req.params
-    res.status(200).json({ message: "this is somewhere !" })
-}
+// Print in console
+console.log("name:", name)
+console.log("phone:", phone)
 
-export { getHome, getSomewhere }
+ // Send response
+res.status(200).json({info: `Name: ${name}, Phone: ${phone}, age: ${age}, address: ${address}, email: ${email}`});
+};
+export {gethome}
 
-https://api.openweathermap.org/data/2.5/weather?name phone
+
+// path parameter
+
+// Controller function for query parameter
+const postHome = (req,res) => {
+    let {name, phone, age, address, email} = req.params;
+// Print in console
+console.log("name:", name)
+console.log("phone:", phone)
+
+// send response
+res.json({info: `Name: ${name}, Phone: ${phone}, age: ${age}, address: ${address}, email: ${email}`});
+};
+export {postHome}
