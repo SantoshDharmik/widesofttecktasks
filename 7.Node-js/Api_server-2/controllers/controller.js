@@ -54,7 +54,7 @@ let getFilterData = (req, res) => {
             resultArray = resultArray.filter((language) => {
                 return language.scope.some(element => element.toLowerCase() === userscope.toLowerCase().trim())
             })
-            queryType += "/scope"
+            queryType += "/scope"  //queryTyep = queryType + "/scope"
         }
 
         //if duration exists in the query 
@@ -62,7 +62,7 @@ let getFilterData = (req, res) => {
             resultArray = resultArray.filter((language) => {
                 return Number(language.duration) <= Number(duration)
             })
-            queryType += "/duration"
+            queryType += "/duration"  //queryTyep = queryType + "/duration"
         }
 
         //if dificulties exists in the query 
@@ -71,7 +71,7 @@ let getFilterData = (req, res) => {
                 return language.difficulties.toLowerCase() == difficulties.toLowerCase().trim()
     
             })
-            queryType += "/difficulties"
+            queryType += "/difficulties"  //queryTyep = queryType + "/duration"
         }
 
         // If nothing matched, throw an error → goes to catch
@@ -95,7 +95,7 @@ let getFilterData = (req, res) => {
     }
 }
 
-
+// (get method)
 // these is for random language dada 
 const getRandomLanguage = (req,res) =>{
     let randomNumber = Math.floor((Math.random()*50) + 1)
@@ -105,11 +105,13 @@ const getRandomLanguage = (req,res) =>{
         res.status(200).json({ message: "random language you were requesting is ", result })
 }
 
+// (get method)
 // these is for all languages dada 
 const getAllLanguages = (req,res) => {
     res.status(200).json({message: `all the languages within the dataset are `, languages})
 }
 
+// (get method)
 // these is for filtering by id number  and it is used path para
 const getLanguageBasedOnId = (req,res)=>{
 try{
@@ -132,4 +134,75 @@ try{
 }
 }
 
-export { getDetails, getFilterData, getRandomLanguage, getAllLanguages, getLanguageBasedOnId }
+// (post method)
+// these is for filtering by id number  and it is used path para
+const postAddLanguages = (req,res) => {
+    try{
+        let { title, scope, duration, difficulties} = req.body
+
+        //scope has to be in array
+        if (!title || !scope || !duration || !difficulties) throw("invalid?incompte data !")
+        
+        // check the scope is an array or not   
+        if(!Array.isArray(scope)) throw("invalid data scope has to be an array !")
+
+        let newLanguage = { title,scope,duration,difficulties}    
+
+        newLanguage.id = languages.length + 1
+
+        languages.push(newLanguage)
+
+        res.status(202).json({
+            message: `new language ${newLanguage.title} addedd successfully !`
+        })
+
+    } catch (err){
+
+         console.log('err while adding a new language !', err)
+        res.status(400).json({ message: `unable to new language !`, err })
+
+    }
+}
+
+// (Delete method)something new it is for delete id from data set
+const deleteLanguage = (req,res) => {
+    try {
+        let { id } = req.params;
+
+        let index = languages.findIndex(language => language.id == id);
+
+        if (index === -1) throw(`Language with id ${id} not found!`)
+
+        let deleted = languages.splice(index, 1);
+
+        res.status(200).json({
+            message: `Language with id ${id} deleted successfully!`,
+            deleted: deleted[0]
+        })
+
+    } catch(err) {
+        res.status(400).json({ message: "Unable to delete language", error: err });
+    }
+}
+
+// (patch method) Update only the provided fields like ex (scope=OS so patch is perfom the role for updating the scope just like scope=Ai)
+
+
+
+
+
+
+
+// export for get
+export { getDetails, getFilterData, getRandomLanguage, getAllLanguages, getLanguageBasedOnId}
+
+// export for post 
+export { postAddLanguages}
+
+// export for delete
+export {deleteLanguage}
+
+
+
+// export for patch 
+// export for put

@@ -8,7 +8,7 @@ dotenv.config({path: "./config.env"})
 
 let app =  express()
 
-let port = process.env.port || 4007
+let port = process.env.port
 
 app.use(express.urlencoded({ extended: true}))
 
@@ -23,7 +23,7 @@ app.get('/', (req,res) => {
 app.use("/languages/api", router)
 // we can write these api all time and the continue filters
 
-app.use((req,res) => {
+app.get((req,res) => {
     console.log("someone is trying to access a 404 route ! ")
     res.status(404).json({ message: "content not found !" })
 })
