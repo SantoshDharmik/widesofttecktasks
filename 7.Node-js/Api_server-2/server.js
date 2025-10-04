@@ -6,6 +6,10 @@ import "./database/connection.js"
 
 import {router} from "./routers/router.js"
 
+import mongoose from "mongoose"
+
+import { userRouter } from "./routers/userRouter.js"
+
 dotenv.config({path: "./config.env"})
 
 let app =  express()
@@ -23,6 +27,8 @@ app.get('/', (req,res) => {res.redirect("/languages/api/get-details")
 
 app.use("/languages/api", router)
 // we can write these api all time and the continue filters
+app.use("/user/api", userRouter)
+
 
 app.get((req,res) => {
     console.log("someone is trying to access a 404 route ! ")

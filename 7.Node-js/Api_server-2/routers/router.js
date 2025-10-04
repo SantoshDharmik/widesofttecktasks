@@ -1,5 +1,7 @@
 import express from "express"
 
+import { checkAdmin } from "../middlewares/checkAdmin.js"
+
 import {getAllLanguages, getDetails, getFilterData, getRandomLanguage, getLanguageBasedOnId, postAddLanguages,deleteLanguage} from "../controllers/controller.js"
 
 let router = express.Router()
@@ -23,7 +25,7 @@ router.get("/random/language",getRandomLanguage)
 router.get("/identity/:id" ,getLanguageBasedOnId)
 
 //it is used for add new  languages
-router.post("/add-languages",postAddLanguages)
+router.post("/add-languages", checkAdmin,postAddLanguages)
 
 //it is used for deleting langauges with the help of id
 router.delete("/deleting/:id",deleteLanguage)
