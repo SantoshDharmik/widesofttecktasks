@@ -1,4 +1,21 @@
-import { languages } from "../data/languages.js"
+// import { languages } from "../data/languages.js"  
+// //these code for api conncetion which is present in the folder that is data.
+
+import { techModel } from "../models/techSchema.js"
+
+let languages = []
+
+async function fetchInitialLanguages() {
+    try {
+        languages = await techModel.find({})
+
+    } catch (err) {
+        console.log(err)
+        languages = []
+    }
+}
+
+fetchInitialLanguages()
 
 let getDetails = (req, res) => {
     res.status(200).json({
@@ -29,7 +46,7 @@ let getDetails = (req, res) => {
                 possibleScopes: [
                     "Web development", "Full-stack", "Mobile apps", "AI", "ML", "Data science", "Scripting", "Enterprise apps", "Android", "Backend systems", "System programming", "Embedded systems", "OS", "Game dev", "High-performance apps",
                     "System software", "Desktop apps", "CMS (WordPress, Drupal)", "Cloud", "Distributed systems", "Web assembly", "Blockchain", "Modern JVM apps", "iOS",
-                    "macOS apps", "Scalable web apps", "Angular", "React apps", "Databases", "Queries", "Data analysis", "Statistics", "Visualization", "Big data", "Functional programming", "Text processing", "Legacy iOS apps", "Engineering", "Simulation", "Scientific computing","Research","Compilers","Automation","Linux administration","Windows automation","DevOps","Real-time systems","Telecom","Simulations","Banking","Finance","JVM ecosystem",".NET ecosystem","Low-level programming","Smart contracts (Ethereum)","Hardware design","FPGA programming","Digital circuits","Logic programming","Military","Avionics","OOP","Cross-platform development","Fast scripting","Facebook’s HHVM ecosystem","SAP systems","Quantum computing","Math-heavy programming","Legacy systems","Educational programming","Basics","Beginner education","Kids programming"
+                    "macOS apps", "Scalable web apps", "Angular", "React apps", "Databases", "Queries", "Data analysis", "Statistics", "Visualization", "Big data", "Functional programming", "Text processing", "Legacy iOS apps", "Engineering", "Simulation", "Scientific computing", "Research", "Compilers", "Automation", "Linux administration", "Windows automation", "DevOps", "Real-time systems", "Telecom", "Simulations", "Banking", "Finance", "JVM ecosystem", ".NET ecosystem", "Low-level programming", "Smart contracts (Ethereum)", "Hardware design", "FPGA programming", "Digital circuits", "Logic programming", "Military", "Avionics", "OOP", "Cross-platform development", "Fast scripting", "Facebook’s HHVM ecosystem", "SAP systems", "Quantum computing", "Math-heavy programming", "Legacy systems", "Educational programming", "Basics", "Beginner education", "Kids programming"
                 ]
             }
         ]
@@ -69,7 +86,7 @@ let getFilterData = (req, res) => {
         if (difficulties) {
             resultArray = resultArray.filter((language) => {
                 return language.difficulties.toLowerCase() == difficulties.toLowerCase().trim()
-    
+
             })
             queryType += "/difficulties"  //queryTyep = queryType + "/duration"
         }
@@ -97,82 +114,93 @@ let getFilterData = (req, res) => {
 
 // (get method)
 // these is for random language dada 
-const getRandomLanguage = (req,res) =>{
-    let randomNumber = Math.floor((Math.random()*50) + 1)
-    let result = languages.filter((language)=>{
+const getRandomLanguage = (req, res) => {
+    let randomNumber = Math.floor((Math.random() * 50) + 1)
+    let result = languages.filter((language) => {
         return language.id === randomNumber
     })
-        res.status(200).json({ message: "random language you were requesting is ", result })
+    res.status(200).json({ message: "random language you were requesting is ", result })
 }
 
 // (get method)
 // these is for all languages dada 
-const getAllLanguages = (req,res) => {
-    res.status(200).json({message: `all the languages within the dataset are `, languages})
+const getAllLanguages = async (req, res) => {
+    try {
+
+        // fetch all languages
+
+        let dataBaselanguages = await techModel.find({})
+
+        if (dataBaselanguages.length == 0) throw ("unable to fetch all languages at this moment !")
+
+        res.status(200).json({ message: 'all the languages within the dataset are.', dataBaselanguages })
+
+    } catch (err) {
+        console.log("error while fetching languages : ", err)
+        res.status(500).json({ message: "unable to find languages", err })
+    }
 }
 
 // (get method)
 // these is for filtering by id number  and it is used path para
-const getLanguageBasedOnId = (req,res)=>{
-try{
-    let { id } = req.params
-    console.log(id)
+const getLanguageBasedOnId = (req, res) => {
+    try {
+        let { id } = req.params
+        console.log(id)
 
-    // if (!id) throw ("invalid id !")
+        if (!id) throw ("invalid id !")
 
-    let result = languages.filter((languages) => {
-        return languages.id == id
-    })
+        let result = languages.filter((languages) => {
+            return languages.id == id
+        })
 
-    if (result.length == 0)  throw (`unable to find language.id ${id}`)
+        if (result.length == 0) throw (`unable to find language.id ${id}`)
 
-    res.status(200).json({message:`we have on id ${id} !`, result: result[0] })
+        res.status(200).json({ message: `we have on id ${id} !`, result: result[0] })
 
-} catch (err){
-    console.log(err)
-    res.status(400).json({ message: `unable to get data based on id !`, err })
+    } catch (err) {
+        console.log(err)
+        res.status(400).json({ message: `unable to get data based on id !`, err })
 
-}
+    }
 }
 
 // (post method)
 // these is for filtering by id number  and it is used path para
-const postAddLanguages = (req,res) => {
-    try{
-        let { title, scope, duration, difficulties} = req.body
+const postAddLanguages =  async (req, res) => {
+    try {
+        let { title, scope, duration, difficulties } = req.body
 
         //scope has to be in array
-        if (!title || !scope || !duration || !difficulties) throw("invalid?incompte data !")
-        
+        if (!title || !scope || !duration || !difficulties) throw ("invalid?incompte data !")
+
         // check the scope is an array or not   
-        if(!Array.isArray(scope)) throw("invalid data scope has to be an array !")
+        if (!Array.isArray(scope)) throw ("invalid data scope has to be an array !")
 
-        let newLanguage = { title,scope,duration,difficulties}    
+       let newTech = new techModel({ title, scope, duration, difficulties })
 
-        newLanguage.id = languages.length + 1
+        await newTech.save()
 
-        languages.push(newLanguage)
+        res.status(202).json({ message: `new language ${title} addedd successfully !` })
 
-        res.status(202).json({
-            message: `new language ${newLanguage.title} addedd successfully !`
-        })
+        fetchInitialLanguages()
 
-    } catch (err){
+    } catch (err) {
 
-         console.log('err while adding a new language !', err)
+        console.log('err while adding a new language !', err)
         res.status(400).json({ message: `unable to new language !`, err })
 
     }
 }
 
 // (Delete method)something new it is for delete id from data set
-const deleteLanguage = (req,res) => {
+const deleteLanguage = (req, res) => {
     try {
         let { id } = req.params;
 
         let index = languages.findIndex(language => language.id == id);
 
-        if (index === -1) throw(`Language with id ${id} not found!`)
+        if (index === -1) throw (`Language with id ${id} not found!`)
 
         let deleted = languages.splice(index, 1);
 
@@ -181,7 +209,7 @@ const deleteLanguage = (req,res) => {
             deleted: deleted[0]
         })
 
-    } catch(err) {
+    } catch (err) {
         res.status(400).json({ message: "Unable to delete language", error: err });
     }
 }
@@ -192,15 +220,15 @@ const deleteLanguage = (req,res) => {
 
 
 // export for get
-export { getDetails, getFilterData, getRandomLanguage, getAllLanguages, getLanguageBasedOnId}
+export { getDetails, getFilterData, getRandomLanguage, getAllLanguages, getLanguageBasedOnId }
 
 // export for post 
-export { postAddLanguages}
+export { postAddLanguages }
 
 // export for delete
-export {deleteLanguage}
+export { deleteLanguage }
 
-// export for patch 
+// export for patch
 
 // export for put
 
