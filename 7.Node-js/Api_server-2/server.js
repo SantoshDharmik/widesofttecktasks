@@ -2,6 +2,8 @@ import  express from "express"
 
 import dotenv from "dotenv"
 
+import "./database/connection.js"
+
 import {router} from "./routers/router.js"
 
 dotenv.config({path: "./config.env"})

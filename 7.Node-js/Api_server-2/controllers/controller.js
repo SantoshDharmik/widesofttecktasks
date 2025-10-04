@@ -1,4 +1,4 @@
-import { languages } from "../database/languages.js"
+import { languages } from "../data/languages.js"
 
 let getDetails = (req, res) => {
     res.status(200).json({
@@ -116,8 +116,9 @@ const getAllLanguages = (req,res) => {
 const getLanguageBasedOnId = (req,res)=>{
 try{
     let { id } = req.params
+    console.log(id)
 
-    if (!id) throw ("invalid id !")
+    // if (!id) throw ("invalid id !")
 
     let result = languages.filter((languages) => {
         return languages.id == id
@@ -190,9 +191,6 @@ const deleteLanguage = (req,res) => {
 
 
 
-
-
-
 // export for get
 export { getDetails, getFilterData, getRandomLanguage, getAllLanguages, getLanguageBasedOnId}
 
@@ -202,7 +200,7 @@ export { postAddLanguages}
 // export for delete
 export {deleteLanguage}
 
-
-
 // export for patch 
+
 // export for put
+

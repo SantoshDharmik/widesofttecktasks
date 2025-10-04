@@ -1,0 +1,169 @@
+read
+
+db.collection.find(query) -> "array/empty array"
+db.collection.findOne(query) -> "object/null
+
+db.collection.find({}) -> no filter(return all the documents availbe within the collection)
+
+oprators
+
+db.collection.find({ _id : value }) - [object] / []
+
+db.collection.find({ _id : value , name : certain_name }) - [object] / []
+
+condition && condition -> [object]/[]
+
+
+
+db.collection.find({ _id : value , name : certain_name })
+
+db.languageData.find({ _id : 18 , title : 'Ruby' })
+
+
+oprators
+
+$lt - less than
+$gt - greater than
+$lte - less than equals to
+$gte -  greater than equals to
+$ne - not equals to
+$eq - equals to
+$in - in[range]
+$nin - not in[range]
+
+{ _id:{$lte : 10}}
+
+db.techs.find({ _id : {$in : [1,5,10]}})
+will return objects with id [1,5,10]
+db.techs.find({ _id : {$nin : [1,5,10]}})
+will return all objects except the one with id [1,5,10]
+
+db.techs.find(
+    { 
+        _id : {
+            $in : [1,5,10]
+        }
+    }
+)
+
+logical oprator
+
+$and
+$or
+$nor  //
+$not
+
+db.techs.find({ $or : [ {_id : { $lte : 10} } , { title : "MATLAB"} ] })
+
+
+db.techs.find({ $and : [ {_id : { $lte : 30} } , { title : "MATLAB"} ] })
+
+db.techs.find({ $nor : [ {_id : { $lte : 10} } , { title : "MATLAB"} , { title : "Smalltalk" } ] })
+
+20 - 30
+
+db.techs.find(
+    { $and : [ {_id : {$gte : 20} } , {_id : {$lte: 30}} ] }
+)
+
+db.techs.find({ _id : { $not : {$gt : 15 } } })
+
+db.collection.find/findOne({query},{projection})
+
+db.techs.find({ _id : { $not : {$lt : 15 } } } , {title : true, scope: true})
+
+db.languageData.find({ _id : { $not : {$gt : 15 } } } , {title : true, scope: true})
+
+
+db.languageData.find(
+    {$nor : [ { _id : {$gte :30} }, { _id: {$lte :49} },
+    { title : "Logo"} , { duration : 2 }
+    ]})
+
+
+db.languageData.find({ $nor : [ {_id : { $lte : 40} } , { title : "MATLAB"} , { title : "Smalltalk" } ] })
+
+
+db.languageData.find(
+    {$and : [ { _id : {$gte :30} }, { _id: {$lte :49} },
+    { title : "Logo"} , { duration : '2' }
+    ]})
+
+db.languageData.find(
+    {$nor : [ { _id : {$gte :30} }, { _id: {$lte :49} },
+    { title : "Logo"} , { duration : '2' }
+    ]})    
+
+db.languageData.find({ $nor : [ {_id : { $lte : 20} } , { title : "Go"} , { title : "SQL" } ] })
+
+
+    db.languageData.find(
+  { 
+    $nor : [{ title : "Scala" }, 
+      { duration : '8' }
+    ] 
+  }
+)
+db.languageData.find({scope:{$in:["Web development","Mobile development","OOP"]}})
+
+
+Array oprators (Read)
+$in:['Web development', 'Full-stack', 'Mobile apps'] -> findOne -> object/null, find -> Array/[]
+$nin
+
+db.techs.find({scope : "Web development"})
+
+db.techs.find({scope:{$in:["Web development","Mobile development"]}})
+
+db.techs.find({scope:{$nin:["Web development","Mobile development"]}})
+
+db.techs.find({scope:{$all :["Web development","Mobile apps"]}})
+
+
+
+db.languageData.find({scope:{$all :['Scalable apps', 'Real-time systems']}})
+
+
+db.techs.find({scope : {$size : 3}})
+
+db.techs.find()
+
+{
+    name: "Student name"
+    phone: "975557884",
+    city : "nagpur",
+    subjects: [
+        { title : "Maths", score : 50 },
+        { title : "Science", score : 80 },
+        { title : "English", score : 70 },
+    ]
+}
+
+db.students.find({ subjects : { $elemMatch : { title : "Maths" , score : { $gt : 50 } } } })
+
+db.collection.updateOne/Many({query},{updation})
+
+$set/$unset
+
+
+it is a short in read
+db.languageData.find().sort({ _id: 1 })   // Ascending (1,2,3,...)
+db.languageData.find().sort({ _id: -1 })  // Descending (10,9,8,...)
+
+db.languageData.find().sort({ duration: 1, title: -1 })
+
+limit 
+db.languageData.find().limit(10)
+
+
+⚡ Quick analogy:
+
+sort → Line ko arrange karo (chhote → bade ya bade → chhote).
+
+skip → Line ke start ke log chhod do.
+
+limit → Sirf itne hi log allow karo andar aane.
+
+
+db.languageData.find({scope: { $all: ['Data science', 'Statistics', 'Visualization'] }})
+
